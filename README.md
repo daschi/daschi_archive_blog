@@ -1,2 +1,2 @@
 # daschi.github.io
-*celebration*
+Celebrate 1st repo!!
