@@ -4,10 +4,24 @@
 
 html {
   background-color: #FDFFFE;
-  width: 100%
+  width: 100%;
 }
 
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+#container {
+  min-height: 100%;
+  position: relative;
+}
 /* ------------------ Header ------------*/
+#header {
+  padding: 10px;
+}
+
 header {
   width: 100%;
   font-family: sans-serif;
@@ -15,26 +29,28 @@ header {
   display: block; 
 }
 
-.wrap{
-	width: 100%;
-	background-color: black;
-
+#head-wrap {
+  background-color: #5DBDF9;
+  width: 100%;
+  margin: 0;
+  display: inline-block;
 }
+
 #myPic {
   float: left;
-  width: 8%;
+  width: 20%;
   padding: 5px;
 }
 
 .name {
   float: left;
-  width: 75%;
+  width: 40%;
 }
 
 #title {
   text-align: left;
   margin: 0 0 0 5px;
-  font-size: 15px
+  font-size: 15px;
 }
 
 #subtitle {
@@ -44,39 +60,38 @@ header {
 }
 
 .site-nav {
-   font-size: 15px;
-   padding: 20px;
+   font-size: 25px;
+   margin: 0 10px 10px 10px;
    float: right;
+   padding-top: 20px;
 }
 
 .nav-item {
   padding: 10px;
 }
 
-hr {
-  border-bottom-style: solid;
-  border-color: #5ECEDD;
-  border-width: 5px;
-  display: inline-block;
-  width: 100%;
-}
 
 /*------------- Links ---------------------*/
 
 a:link {
-  color: #5DBDF9;
+  color: #F95D5E;
   text-decoration: none;
   }
 
 a:visited {
-  color: #F95D5E;
-}
-
-a:hover {
   color: #5EC6B7;
 }
 
+a:hover {
+  color: #FFFFFF;
+}
+
 /*----------------- Blog Index ---------------*/
+
+#body {
+  padding: 10px;
+  padding-bottom: 20px;
+}
 
 .blog-index
 {
@@ -95,6 +110,13 @@ table {
 /*----------------- Footer ---------------*/
 
 footer{
-  margin-top: 20px;
+  margin: 0 20px 0 0;
   float: right;
+}
+
+#footer{
+   position:absolute;
+   bottom:40px;
+   width:100%;
+   height:60px;   /* Height of the footer */
 }

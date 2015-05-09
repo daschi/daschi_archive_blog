@@ -6,19 +6,39 @@ html {
   width: 100%
 }
 
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+#container {
+  min-height: 100%;
+  position: relative;
+}
+
 /* ------------------ Header ------------*/
+#header {
+  padding: 10px ;
+}
+
 header {
   width: 100%;
   font-family: sans-serif;
   top: 0;
   display: block;
+}
 
-  
+#head-wrap {
+  background-color: #5DBDF9;
+  width: 100%;
+  margin: 0;
+  display: inline-block;
 }
 
 .name {
   float: left;
-  width: 70%
+  width: 40%
 }
 
 #title {
@@ -35,71 +55,73 @@ header {
 }
 
 .site-nav {
-   font-size: 15px;
-   width: 30%
-   padding: 40px;
+   font-size: 25px;
+   margin: 0 10px 10px 10px;
    float: right;
+   padding-top: 20px;
 }
 
 .nav-item {
   padding: 10px;
 }
 
-hr {
-  border-bottom-style: solid;
-  border-color: #5ECEDD;
-  border-width: 5px;
-  display: inline-block;
-  width: 100%;
-}
 
 /*------------- Links ---------------------*/
 
 a:link {
-  color: #5DBDF9;
+  color: #F95D5E;
   text-decoration: none;
   }
 
 a:visited {
-  color: #F95D5E;
-}
-
-a:hover {
   color: #5EC6B7;
 }
 
+a:hover {
+  color: #FFFFFF;
+}
+
 /*----------------- About Me ---------------*/
+#body {
+  padding: 10px;
+  padding-bottom: 20px;
+}
 section {
   font-family: sans-serif;
-  width: 100%
-  
+  width: 100%;
   }
 
 .intro {
   display: inline-block;
   margin: 0 1.5%;
-  width: 100%  
+  width: 100%;
 }
 
+p.aboutMe{
+  margin-right: 15%;
 }
+
 .aboutMe{
-  float: right;
-  padding: 20px;
-  margin: 0 40px;
+  margin: 0 10px 10px 0;
   width: 70%;
 }
 
 #myPic {
   float: left;
   width: 30%;
-  padding: 20px;
+  padding: 10px;
 
 }
 
-
 /*----------------- Footer ---------------*/
-.footer{
+footer{
+  margin: 0 20px 0 0;
   float: right;
 }
 
-</style>s
+#footer{
+   position:absolute;
+   bottom:40px;
+   width:100%;
+   height:60px;   /* Height of the footer */
+}
