@@ -1,0 +1,19 @@
+div #container {
+}
+
+div #header {
+	background-color: red;
+	position: static;
+}
+
+div #site-nav {
+	background-color: yellow;
+}
+
+div #blog-content {
+	background-color: orange;
+}
+
+div #footer {
+	background-color: black;
+}
