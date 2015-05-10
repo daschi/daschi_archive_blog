@@ -2,18 +2,42 @@ div #container {
 }
 
 div #header {
-	background-color: red;
+	background-color: pink;
+	width: 100%;
+	height: 50px;
 	position: static;
+	top: 100px;
 }
 
 div #site-nav {
 	background-color: yellow;
+	width: 200px;
+	height: 100%;
+	position: absolute;
+	right: 0;
+
 }
 
 div #blog-content {
 	background-color: orange;
+	width: 100%;
+	position: static;
+	height: 960px;
+}
+
+div #content {
+	background-color: red;
+	position: relative;
+	left: 50px;
+	top: 20px;
+	width: 75%;
+	height: 100%;
 }
 
 div #footer {
-	background-color: black;
-}
+	background-color: grey;
+	width: 100%;
+	height: 100px;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
