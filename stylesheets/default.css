@@ -87,7 +87,9 @@ a:hover {
   padding: 20px;
   margin: 0 auto;
   max-width: 1000px;
+  display:block;
 }
+
 section {
   font-family: sans-serif;
   width: 100%;
@@ -120,15 +122,17 @@ p.aboutMe{
 
 /*----------------- Footer ---------------*/
 footer{
-  margin: 0 0px 10px 0;
+  margin: 10px 20px 0px 0;
   float: right;
 }
 
 #footer{
   background-color: #eee;
-   display: inline-block;
-   bottom: 0;
-   width:100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100px;
+  width:100%;
 }
 
 .social-media {
