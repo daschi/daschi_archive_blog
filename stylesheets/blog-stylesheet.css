@@ -15,7 +15,7 @@ html, body {
 
 #container {
   min-height: 100%;
-  position: absolute;
+  position: relative;
 }
 /* ------------------ Header ------------*/
 #header {
@@ -90,11 +90,11 @@ a:hover {
 /*----------------- Blog Index ---------------*/
 
 #body {
-  padding: 10px;
-  padding-bottom: 20px;
+  padding: 30px 10px 10px 10px;
   border-bottom:1px solid #eee;
   margin: 0 auto;
   max-width: 1000px;
+  display: block;
 }
 
 #blog-index
@@ -226,8 +226,9 @@ footer{
 #footer{
   background-color: #eee;
   position: relative;
-  display: inline-block;
-  bottom: 0px;
+  bottom: 0;
+  left: 0;
+  height: 100px;
   width:100%;
 }
 
