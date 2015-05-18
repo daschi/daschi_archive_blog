@@ -3,7 +3,7 @@
 /* ------------------ Page Structure ------------------ */
 
 html {
-  background-color: #FDFFFE;
+  background-color: #e6e6e6;
   width: 100%;
 }
 
@@ -16,6 +16,7 @@ html, body {
 #container {
   min-height: 100%;
   position: relative;
+  background: #e6e6e6;
 }
 /* ------------------ Header ------------*/
 #header {
@@ -27,7 +28,6 @@ header {
   font-family: sans-serif;
   top: 0;
   display: block;
-  border-bottom:1px solid #eee;
 }
 
 #head-wrap {
@@ -125,15 +125,13 @@ table {
   position: relative;
   margin: 0 100px 50px 100px;
 	font-family: sans-serif;
+  background-color: #e6e6e6;
 }
 
 .blog-heading {
 	font-family: sans-serif;
 	text-align: left;
 	width: 90%;
-	padding: 0;
-	display: block;
-	margin: 0;
 }
 
 .blog-image-wrapper{
@@ -179,8 +177,9 @@ figcaption{
 	font-size: 15px;
 	text-align: left;
   position: relative;
-  left: 50px;
-  right: 50px;
+  margin: 5% 20% 10% 5%;
+  background-color: #fff;
+  padding: 1% 5% 5% 5%;
 }
 
 .blog-title {
@@ -215,7 +214,26 @@ border: 3px solid black;
   border-bottom: 2px solid #eee;
 }
 
+/*---------------- Blog Nav ---------------*/
+.navbar-default{
+  font-family: sans-serif;
+  background-color: transparent;
+  width: 20%;
+  position: fixed;
+  top: 15%;
+  left:75%;
+  padding: 10px;
+  margin-left: 20px;
+}
 
+.blog-nav{
+  padding: 10px;
+  line-height: 2;
+}
+
+#nav-bar-title{
+  border-bottom: 1px solid black;
+}
 /*----------------- Footer ---------------*/
 
 footer{
