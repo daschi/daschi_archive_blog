@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<head>
+  <title>daschi/blog</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog-stylesheet.css">
+</head>
+
+<body>
+<!-- The container helps to position everything on the page -->
+
+<div id="container">
+
+<!-- ***** Header ***** -->
+<div id="header">
+<header>
+<div id="head-wrap">
+    <div class="name">
+          <img src="../imgs/daniela.jpg" id="myPic" alt="my-picture"/>
+    <h1 id="title">Daniela Schiano di Cola</h1>
+    <h3 id="subtitle">build and learn<br>a bootcamp story</h3> 
+</div>
+
+<!-- ***** Site nav ***** -->
+    <nav class="site-nav">
+        <a href="https://daschi.github.io/" class="nav-item">Home</a>
+        <a href="https://daschi.github.io/blog/index.html" class="nav-item">Blog</a>
+        <a href="https://daschi.github.io/projects-page.html" class="nav-item">Projects</a>
+        <a href="https://daschi.github.io/contact-me.html" class="nav-item">Contact</a>
+    </nav>
+    </div>
+ </header>
+ </div>
+
+<!-- ****** Actual Blog ***** -->
+
+<div class="blog-body">
+
+  <div class="blog-heading">
+    <h1>Ruby Enumerable Method group_by</h1>
+    <h3><code>Enumerable#group_by</code></h3>
+    <h4>2015-05-24</h4>
+  </div>
+
+  <article class="blog-content">
+   <h2>Grouping Collections by Anything--seriously?</h2>
+    <p>The group_by method in Ruby takes a collection (like a Hash, Array or Range) and divides it into different groups depending on the criteria given in the code block that follows the method.</p>
+
+  <pre><code>example_array.group_by {|item_in_list| <emphasis>criteria here</emphasis>}</code></pre>
+
+  <p>The criteria can be anything you want to use to group the items in the list! The group_by method will return a Hash with keys displaying the grouping criteria, and the values matching that criteria from the list.</p><br>
+
+  <p>Let's look at some examples!</p>
+
+<ol>
+  <li><h2>Array: group_by word length</h2></li>
+
+<pre><code>names = ["Daniela", "Leon", "Drake", "Alexis", "Tom", "Paul"]
+names.group_by {|name| name.length}
+
+=> {7=>["Daniela"], 4=>["Leon", "Paul"], 5=>["Drake"], 6=>["Alexis"], 3=>["Tom"]}
+
+names.group_by {|name| name.length > 4}
+=> {true=>["Daniela", "Drake", "Alexis"], false=>["Leon", "Tom", "Paul"]}</code></pre>
+
+<p>The first example here shows that the array of names is returned as a hash, with the group by criteria as the key and the corresponding values. For example, in the second pair, the name length "4" is the key and the names with 4 letters each are the values.</p>
+
+<p>In the second example, we passed in a code block that evaluates to either <code>True</code> or <code>False</code>. Here you see the names separated by names whose lengths are greater than 4 (True) and those less than 4 (False).</p>
+
+<li><h2>Array: group_by include?</h2></li>
+
+<pre><code>names = ["Daniela", "Leon", "Drake", "Alexis", "Tom", "Paul"]
+
+names.group_by{|name| name.include?("a")}
+=> {true=>["Daniela", "Drake", "Paul"], false=>["Leon", "Alexis", "Tom"]}</code></pre>
+
+<p>This shows another example where the code block evaluates to <code>True</code> or <code>False</code>. Here we're asking each name in the list whether or not it includes the letter "a". If yes, then it's grouped with the <code>True</code> pile, otherwise it's sanctioned to the lonely <code>False</code> planet devoid of the letter "a" (Sorry Leon!).</p>
+
+<li><h2>Range: group_by value, divisibility, and so on</h2></li>
+<p>With ranges, you can divide a range of numbers by any numerical criteria you want. Here I chose dividiable by 2, but it could be anything. You can see that the keys mark the two groups, where 1 lists the numbers with a remainder of 1 when divided by 2, and the 0 group holds the numbers with remainder of 0 when divided by 2. If we had set this to divisible by 3, we would have 3 groups (remainder 0, 1, and 3 groups).</p>
+
+<pre><code>(1..6).group_by {|x| x % 2}
+=> {1=>[1, 3, 5], 0=>[2, 4, 6]}</pre></code>
+
+<li><h2>Hash: group_by value or key</h2></li>
+
+<pre><code>names = {"Daniela" => "cool", "Alexis" => "cool", "Leon" => "OK", "Drake" => "OK", "Paul" => "OK"}
+names.group_by {|k, v| v == "cool"}
+=> {true=>[["Daniela", "cool"], ["Alexis", "cool"]], false=>[["Leon", "OK"], ["Drake", "OK"], ["Paul", "OK"]]}</code></pre>
+
+<p>Here we are grouping based on the value. If the value equals cool in the key/value pair, then it's grouped in the <code>True</code> pile. Seems like we can easily tell who the cool kids are in this group...</p>
+
+<p>Moving on...you can also group by first letter, second letter, [x] letter, basically, in either an Array, Hash or Range, you can group by any specific property you can call out from the list.</p> 
+
+<pre><code>names.group_by {|k, v| k[0]}
+=> {"D"=>[["Daniela", "cool"], ["Drake", "OK"]], "A"=>[["Alexis", "cool"]], "L"=>[["Leon", "OK"]], "P"=>[["Paul", "OK"]]}</code></pre>
+
+<p>This here is grouping by 1st letter of the key, as shown by <code>k[0]</code>, which is asking for the zero index of the key. The zero index of "Daniela" is "D".</p>
+</ol>
+<h2>Conclusion</h2>
+<p>The group by method can be seen as a delegator of items based on the criteria you want to divide along. It can tell you who's cool or just OK, it can group by divisibile remainders, or really any criteria you give it that is an actual property or some or all of the items in the list. I can see this being extremely useful when you want to sort through a list and group them into different categories for different purposes.</p>
+
+<div class="resources">
+      <h2>Additional Resources & References</h2>
+      <a href="http://www.globalnerdy.com/2008/08/31/enumerating-enumerable-enumerablegroup_by/" target="_blank">Enumerating Enumerables: Group By</a><br>
+</div>
+</article>
+
+<!-- ***** Footer ***** -->
+<div id="footer">
+
+<footer>
+
+    <div>
+      <p><a href="mailto:daschi87@gmail.com">Talk to me!</a></p>
+    </div>
+
+    <div class="social-media">
+    <a href="https://github.com/daschi" target="_blank"><img title="GitHub" alt="GitHub" src="../imgs/GitHub.png" width="35" height="35"/></a>
+    <a href="https://twitter.com/daschi" target="_blank">
+    <img title="Twitter" alt="Twitter" src="https://socialmediawidgets.files.wordpress.com/2014/03/twitter1.png" width="35" height="35" /></a>
+    <a href="https://www.linkedin.com/in/daschi" target="_blank">
+    <img title="LinkedIn" alt="LinkedIn" src="https://socialmediawidgets.files.wordpress.com/2014/03/linkedin1.png" width="35" height="35" /></a>
+    <a href="https://www.facebook.com/daniela.anna.75" target="_blank">
+    <img title="Facebook" alt="Facebook" src="https://socialmediawidgets.files.wordpress.com/2014/03/facebook1.png" width="35" height="35" /></a>
+    </div>
+</footer>
+</div> <!--***** Close footer container div *****-->
+</div> <!--***** Close container div *****-->
+</body>
+</html>
+
+
+pre{
+  background: black;
+  border: 2px solid gray;
+  padding: 5px;
+  color: #58D9EF;
+  width: 100%;
+}
+
+.resources {
+  margin-bottom: 5%;
+}
+
+
+
+
+
+
+
+
