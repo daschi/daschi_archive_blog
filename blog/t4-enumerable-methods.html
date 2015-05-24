@@ -56,7 +56,7 @@
 <pre><code>names = ["Daniela", "Leon", "Drake", "Alexis", "Tom", "Paul"]
 names.group_by {|name| name.length}
 
-=> {7=>["Daniela"], 4=>["Leon", "Paul"], 5=>["Drake"], 6=>["Alexis"], 3=>["Tom"]}
+=> {7=>["Daniela"], 4=>["Leon", "Paul"], 5=>["Drake"], <br>6=>["Alexis"], 3=>["Tom"]}
 
 names.group_by {|name| name.length > 4}
 => {true=>["Daniela", "Drake", "Alexis"], false=>["Leon", "Tom", "Paul"]}</code></pre>
@@ -82,7 +82,7 @@ names.group_by{|name| name.include?("a")}
 
 <li><h2>Hash: group_by value or key</h2></li>
 
-<pre><code>names = {"Daniela" => "cool", "Alexis" => "cool", "Leon" => "OK", "Drake" => "OK", "Paul" => "OK"}
+<pre><code>names = {"Daniela" => "cool", "Alexis" => "cool", "Leon" => "OK", <br>"Drake" => "OK", "Paul" => "OK"}
 names.group_by {|k, v| v == "cool"}
 => {true=>[["Daniela", "cool"], ["Alexis", "cool"]], false=>[["Leon", "OK"], <br>["Drake", "OK"], ["Paul", "OK"]]}</code></pre>
 
@@ -91,7 +91,7 @@ names.group_by {|k, v| v == "cool"}
 <p>Moving on...you can also group by first letter, second letter, [x] letter, basically, in either an Array, Hash or Range, you can group by any specific property you can call out from the list.</p> 
 
 <pre><code>names.group_by {|k, v| k[0]}
-=> {"D"=>[["Daniela", "cool"], ["Drake", "OK"]], "A"=>[["Alexis", "cool"]], "L"=>[["Leon", "OK"]],<br> "P"=>[["Paul", "OK"]]}</code></pre>
+=> {"D"=>[["Daniela", "cool"], ["Drake", "OK"]], "A"=>[["Alexis", "cool"]], <br>"L"=>[["Leon", "OK"]], "P"=>[["Paul", "OK"]]}</code></pre>
 
 <p>This here is grouping by 1st letter of the key, as shown by <code>k[0]</code>, which is asking for the zero index of the key. The zero index of "Daniela" is "D".</p>
 </ol>
