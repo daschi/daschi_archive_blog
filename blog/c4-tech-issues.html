@@ -37,21 +37,54 @@
   <div class="blog-heading">
     <h1>Issues in Tech: Localization</h1>
     <h3>Localizing software for language and culture</h3>
-    <h4>DATE</h4>
+    <h4>2015-05-24</h4>
   </div>
   
-      <img src="../imgs/REPLACEIMAGE.png" alt="command line" class="blog-image"/>
+      <img src="../imgs/localize.png" alt="localize" class="blog-image"/>
 
-   <h2>BLOG POST HEADING</h2>
-    <p>BLOG CONTENT PARAGRAPH 1</p>
-     
-    <p>BLOG CONTENT PARAGRAPH 1</p>
+   <h2>Localization and Internationalization</h2>
+    <p>This week in DevBootcamp, we are asked to select an issue in the tech industry to write about. Instinctually my mind wandered to issues like women in tech, diversity in tech, educational opportunities for the low-income students to be exposed to tech, etc. Don't get me wrong, I could go on and on for hours on those topics, which is why I've decided to talk about something I've been marginally involved with in the past year, but don't particularly know too many details about.</p> 
+    That's why I'll try to focus this post on localization and internationalization of software and applications. I know a bit because I've been a localization project manager for the past year, which means I worked with various (tech company) clients to localize and internationalize their software, web/mobile apps, and sites into whichever languages are needed for their market. I've heard many times from engineers in the field that it's particularly difficult to write a program that will later be internationalized. My quest for today is to find out some reasons why it is difficult to internationalize code.</p>
 
-      <ul class="list">
-        <li>LIST ITEMS</li></ul>
-     
-      <ol>
-        <li>LIST ITEMS</li></ol>
+    <h2>What are Localization and Internationalization?</h2>
+    <h3>Localization: L10n</h3>
+    <p>Simply, localization adapts a product, application or content to match the linguistic and cultural needs of a specific audience. This is done by translators, usually with a CAT (Computer-Assisted Translation) Tool. CAT tools work by segmenting sentences into either whole sentences or phrases where it seems semantically logical to segment. This helps the translator break up the meaning of a sentence and restructure it as they need to for their language, and also saves the segments in a database called a Translation Memory (TM). The TM stores all the previously translated segments so that files that are updated later down the road can be analyzed and leveraged using previous translations. This helps translators to recycle and reuse past translations, and it also saves time and money. Localizing a product also means testing, which is a crucial step to ensure that everything in the UI and content makes sense in context.</p>
+    <p>One more quick note on the difference between "localization" and "translation". Localizing creates a new product that is culturally and linguistically appropriate for the country and audience. For example, a file may be translated into Spanish--but which Spanish? It will need to be localized for either Spanish for Spain, for Mexico, Argentina, Guatemala, Ecuador...I think you are seeing the point now...</p>
+
+    <h3>Internationalization: i18n</h3>
+    <p>Internationalization is done by developers, and is the process of reviewing a program's files to make sure the code ready for localization.This could include pulling out content from within code (i.e. removing user interface text from Javascript), supporting local standards, such as date, time and currency, and handling Unicode or other character encoding standards. This process would ideally create a new, global product can be localized to support any locale and target country's needs.</p>
+    
+    <h3>Issues related to Internationalizing Code</h3>
+
+    <p>So in my breakdown of internationalization and localization, I hinted at some potential issues developers face while preparing content for translation. For one, if a software or app may eventually become localized, this should be taken into account in they first planning stages of the application and site. This will save a lot of time and effort in the future to retroactively make your software localizeable.</p>
+
+    <p>Here are some other issues or considerations for internationalizing code that may be interesting:</p>
+    <ul>
+    <li>Encoding</li>
+    <p>Usually some form of Unicode should be used</p>
+    <li>Text Direction</li>
+    <p>Does your UI design work for right to left languages?</p>
+    <li>Text spacing, buttons, windows</li>
+    <p>A 5 letter word in English could be a 10 letter word in German, Turkish, or French. Consider the possibility of resizing windows and buttons</p>
+    <li>Remove Strings into a New File</li>
+    <p>Do not hard code strings! Many CAT tools can't extract text from script files, so any content that needs to be translated should be pulled out and saved into a properties or resource file instead, and loaded as needed. The application can select the correct resource file for the language selected.</p>
+    <li>TIME</li>
+    <p>Time is its own issue. If you plan to localize, consider that it will take just as much time to localize (if not more) than it did to write the original source file. If you make periodic updates to source code, add in time to the development cycle for localization so that all versions are up to date around the same time frame.</p>
+    <li>Symbols, icons, colors</li>
+    <p>Do these symbols, icons, colors work for all cultures?</p>
+    <li>Sorting</li>
+    <p>Think about sorting A-Z, with all the letters in the Turkish alphabet. What about with Chinese characters?</p>
+    </ul>
+
+    <p>Caveat: There is a HUGE amount of information about this, so what I've said here may or may not be accurate. END CAVEAT</p>
+    <p>I'm still learning, so although many of my "issues" sound very authoritative, think of them more as questions to open the dialogue of what we need to do to localize software.</p>
+ <div class="resources">
+      <h2>Additional Resources & References</h2>
+      <a href="http://www.w3.org/International/questions/qa-i18n" target="_blank">W3C: Localization vs. Internationalization</a><br>
+      <a href="http://www.gala-global.org/" target="_blank">GALA: Globalization and Localization Association</a><br>
+      <a href="http://edutechwiki.unige.ch/en/Software_localization" target="_blank">EduTech Wiki: Software Localization</a><br>
+      <a href="http://www.smashingmagazine.com/2012/07/18/12-commandments-software-localization/" target="_blank">Smashing Magazine: Twelve Commandments of Software Localization</a><br>
+      </div>
     </article>
  </div>
 
