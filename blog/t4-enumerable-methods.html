@@ -85,14 +85,14 @@ names.group_by{|name| name.include?("a")}
 
 <pre><code>names = {"Daniela" => "cool", "Alexis" => "cool", "Leon" => "OK", "Drake" => "OK", "Paul" => "OK"}
 names.group_by {|k, v| v == "cool"}
-=> {true=>[["Daniela", "cool"], ["Alexis", "cool"]], false=>[["Leon", "OK"], ["Drake", "OK"], ["Paul", "OK"]]}</code></pre>
+=> {true=>[["Daniela", "cool"], ["Alexis", "cool"]], false=>[["Leon", "OK"], <br>["Drake", "OK"], ["Paul", "OK"]]}</code></pre>
 
 <p>Here we are grouping based on the value. If the value equals cool in the key/value pair, then it's grouped in the <code>True</code> pile. Seems like we can easily tell who the cool kids are in this group...</p>
 
 <p>Moving on...you can also group by first letter, second letter, [x] letter, basically, in either an Array, Hash or Range, you can group by any specific property you can call out from the list.</p> 
 
 <pre><code>names.group_by {|k, v| k[0]}
-=> {"D"=>[["Daniela", "cool"], ["Drake", "OK"]], "A"=>[["Alexis", "cool"]], "L"=>[["Leon", "OK"]], "P"=>[["Paul", "OK"]]}</code></pre>
+=> {"D"=>[["Daniela", "cool"], ["Drake", "OK"]], "A"=>[["Alexis", "cool"]], "L"=>[["Leon", "OK"]],<br> "P"=>[["Paul", "OK"]]}</code></pre>
 
 <p>This here is grouping by 1st letter of the key, as shown by <code>k[0]</code>, which is asking for the zero index of the key. The zero index of "Daniela" is "D".</p>
 </ol>
@@ -104,6 +104,22 @@ names.group_by {|k, v| v == "cool"}
       <a href="http://www.globalnerdy.com/2008/08/31/enumerating-enumerable-enumerablegroup_by/" target="_blank">Enumerating Enumerables: Group By</a><br>
 </div>
 </article>
+
+<!-- ***** Blog-Nav *** -->
+<nav class="navbar-default">
+<h3 id="nav-bar-title">Posts</h3>
+<a href="https://daschi.github.io/blog/c3_thinking-style.html" class="blog-nav">My Thinking Style</a>
+<br>
+<a href="https://daschi.github.io/blog/c1-chefs-kitchen.html" class="blog-nav">DBC Culture</a>
+<br>
+<a href="https://daschi.github.io/blog/t1-git-blog.html" class="blog-nav">Git, GitHub, Version Control</a>
+<br>
+<a href="https://daschi.github.io/blog/t2-css-design.html" class="blog-nav">CSS Positioning</a>
+<br>
+<a href="https://daschi.github.io/blog/t3-arrays-hashes.html" class="blog-nav">[Arrays] & {Hashes}</a>
+<br>
+<a href="https://daschi.github.io/blog/t4-enumerable-methods.html" class="blog-nav">Group_By Method</a>
+</nav>
 
 <!-- ***** Footer ***** -->
 <div id="footer">
@@ -128,22 +144,6 @@ names.group_by {|k, v| v == "cool"}
 </div> <!--***** Close container div *****-->
 </body>
 </html>
-
-
-pre{
-  background: black;
-  border: 2px solid gray;
-  padding: 5px;
-  color: #58D9EF;
-  width: 100%;
-}
-
-.resources {
-  margin-bottom: 5%;
-}
-
-
-
 
 
 

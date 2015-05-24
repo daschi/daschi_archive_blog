@@ -214,6 +214,18 @@ border: 3px solid black;
   border-bottom: 2px solid #eee;
 }
 
+pre{
+  background: black;
+  border: 2px solid gray;
+  padding: 5px;
+  color: #58D9EF;
+  width: 100%;
+}
+
+.resources {
+  margin-bottom: 5%;
+}
+
 /*---------------- Blog Nav ---------------*/
 .navbar-default{
   font-family: sans-serif;
