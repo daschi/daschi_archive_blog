@@ -237,7 +237,7 @@ pre .note {
 /*---------------- Blog Nav ---------------*/
 .navbar-default{
   font-family: sans-serif;
-  background-color: transparent;
+  background-color: #5DBDF9;
   width: 20%;
   position: fixed;
   top: 15%;
@@ -251,9 +251,7 @@ pre .note {
   line-height: 2;
 }
 
-#nav-bar-title{
-  border-bottom: 1px solid black;
-}
+
 /*----------------- Footer ---------------*/
 
 footer{
