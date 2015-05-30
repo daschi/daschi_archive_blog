@@ -165,6 +165,12 @@ table {
   margin: 10px 10px 10px 20px;
 }
 
+.blog-image-3{
+  display: inline-block;
+  width: 100%;
+
+}
+
 figcaption{
   font-size: 15px;
   position: relative;
@@ -219,12 +225,14 @@ pre{
   border: 2px solid gray;
   padding: 5px;
   color: #58D9EF;
-  width: 100%;
+  max-width: auto;
+  word-wrap: break-word;
 }
 
-.resources {
-  margin-bottom: 5%;
+pre .note {
+  color: #ffffff;
 }
+
 
 /*---------------- Blog Nav ---------------*/
 .navbar-default{

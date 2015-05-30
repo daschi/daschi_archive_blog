@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<head>
+  <title>daschi/blog</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog-stylesheet.css">
+</head>
+
+<body>
+
+<!-- The container helps to position everything on the page -->
+
+<div id="container">
+
+<!-- ***** Header ***** -->
+<div id="header">
+<header>
+<div id="head-wrap">
+    <div class="name">
+          <img src="../imgs/daniela.jpg" id="myPic" alt="my-picture"/>
+    <h1 id="title">Daniela Schiano di Cola</h1>
+    <h3 id="subtitle">build and learn<br>a bootcamp story</h3>
+    </div>
+
+<!-- ***** Site nav ***** -->
+    <nav class="site-nav">
+        <a href="https://daschi.github.io/" class="nav-item">Home</a>
+        <a href="https://daschi.github.io/blog/index.html" class="nav-item">Blog</a>
+        <a href="https://daschi.github.io/projects-page.html" class="nav-item">Projects</a>
+        <a href="https://daschi.github.io/contact-me.html" class="nav-item">Contact</a>
+    </nav>
+    </div>
+ </header>
+ </div>
+
+<!-- ***** Blog Starts ***** -->
+<div class="blog-body">
+
+<article class="blog-content">
+  <div class="blog-heading">
+    <h1>Ruby Classes</h1>
+    <h3>A look into classes, instance variables and instance methods</h3>
+    <h4>2015-05-30</h4>
+  </div> <!--End blog-heading div-->
+
+  <img src="../imgs/pizza.png" alt="class" class="blog-image"/>
+
+  <h2>Introduction</h2>
+  <p>In Ruby, most everything you work with in a program is considered an object. A class holds a collection of methods that you define when you create the Class. The object you create from a Class is referred to as an instance of the class, and has access to all the methods defined within the Class. A method defined within a class is called an Instance Method, and variables created within the Class are called Instance Variables. Instance Methods can be utilized by any object of the Class, and Instance Variables can be used throughout the method definitions of the Class.</p>
+
+  <p>The instance variables are properties or attributes you want the object to have and the instance methods are what you want the object to do. For example, a Vehicle class may have the instance variables color, model, make and the instance methods drive, accelerate, stop, reverse. </p>
+
+  <h2>PIZZA Class!</h2>
+  <p>Here's a simple example of how a class, object and method are set up using PIZZA as our class name and object.</p>
+  <pre>
+  class Pizza <span class="note">#1</span>
+  attr_accessor :size, :style, :toppings <span class="note">#2</span>
+  
+  def initialize <span class="note">#3</span>
+        @size = size <span class="note">#4</span>
+        @style = style
+        @toppings = []
+  end
+  </pre>  
+  <ol>
+    <li>This creates a class named Pizza</li>
+    <li>Then, the attr_accessor creates read/write instance variables for size, style and toppings. This lets you decide if the variables can be set to something different later on in the methods.</li>
+    <li>The first method you need when creating a class is an initialize method. This allows you to create object from the class, and tells the new object what it can do and what variables it has when it's first created (i.e. intialized).</li>
+    <li>The @size, @style and @toppings are instance variables. Instance variables are always preceded by an @ symbol. Size and style are set to themselves, and @toppings is set to an empty array that will be filled in one of the instance methods.</li>
+  </ol>
+<p>We've initiated our class Pizza with instance variables size, style and toppings, now it's time to give it some methods! What are some methods a Pizza object might have? I came up with some of the following, but I'm sure there's tons more it can do. Take a look at my list, what more could we add?
+<ul class="list">
+  <li>Pizza#select_size</li>
+  <li>Pizza#select_style</li>
+  <li>Pizza#add_toppings</li>
+  <li>Pizza#cut_slices</li>
+  <li>Pizza#eat_slices</li>
+</ul>
+<p>If we were to start with the two, #select_size and #select_style, they could look like this:</p>
+<pre>
+...continued from above
+
+def select_size
+    puts "Please select a size: 12 inch, 14 inch or 16 inch?"
+    @size = gets.chomp
+end 
+
+def select_style
+    puts "Please select a style: New York or Sicilian?"
+    @style = gets.chomp
+    puts "One #{@size} sized #{@style} style pizza coming up!"
+end
+</pre>
+<p>Now we start to see how cool instance variables are. Notice how I assigned @size in the method Pizza#select_size, but then used it again in Pizza@select_style? This is because instance variables can be used in any method you create within the class if they are initialized at the beginning. If we had used a regular variable in select_size, we could not use it again in a new method and its scope would be limited to where it was first defined.</p>
+
+<p>Now let's add the toppings! This is just one way I found to do it, and I'm sure there are many different options. I also considered running the toppings in as arguments, but I wanted it to be more user-interactive so I used gets.chomp method to assign the toppings variable to what ever the user wanted.</p>
+
+<pre>
+def add_toppings
+      puts "What would you like on the pizza?"
+      toppings = gets.chomp
+      @toppings = toppings.split(" ")
+      if @toppings.count == 2
+          @toppings = @toppings[0].to_s + " and " + @toppings[1].to_s
+      elsif
+      @toppings.count > 2
+        @toppings =  @toppings.insert(@toppings.size - 1, "and").join(" ")
+      else
+          @toppings = @toppings.join("")
+      end #End if statement
+      puts "You ordered a #{@size} inch #{@style} style pizza with #{@toppings}."
+  end 
+  </pre>
+
+  <p>There's a lot going on in this one! Basically, I tried to make it so the user's response would be assigned to the local variable toppings so that it could be split into an array and assigned to the instance variable @toppings. Then I check to see if the @toppings array has exactly two items, if it does, I assign the @toppings variable to the joined string of those two items, joined by the word "and". If it's greater than two, then I create a new string that inserts "and" before the second to last item. It's a little messy because I don't have commas in the right place with greater than 2 items, but for now it is my "Minimum Viable Product". Some time when I'm more proficient with Ruby, I'll revisit and see how to clean this method up so my imaginary pizza customers see a grammatically pretty output. </p>
+  <p>Here's the output from running these lines:</p>
+  <pre>
+  my_pizza = Pizza.new
+  my_pizza.select_size
+  my_pizza.select_style
+  my_pizza.add_toppings
+  </pre>
+  <img src="../imgs/pizza-output.png" alt="pizza-output" class="blog-image-3"/>
+  <p>Thanks for reading!</p>
+
+<div class="resources">
+      <h2>Additional Resources & References</h2>
+      <a href="http://www.eriktrautman.com/posts/ruby-explained-classes" target="_blank">Ruby Explained: Classes</a><br>
+      <a href="http://code.tutsplus.com/tutorials/ruby-for-newbies-working-with-classes--net-15938" target="_blank">Ruby for Newbies: Working with Classes</a><br>
+      <a href="http://rubylearning.com/satishtalim/writing_our_own_class_in_ruby.html" target="_blank">Ruby Learning: Writing our own class in Ruby</a><br>
+      <a href="http://www.tutorialspoint.com/ruby/ruby_classes.htm" target="_blank">Ruby Classes and Objects</a><br>
+</div>
+</article>
+</div>
+
+
+<!-- ***** Blog-Nav *** -->
+<nav class="navbar-default">
+<h3 id="nav-bar-title">Posts</h3>
+<a href="https://daschi.github.io/blog/c3_thinking-style.html" class="blog-nav">My Thinking Style</a>
+<br>
+<a href="https://daschi.github.io/blog/c1-chefs-kitchen.html" class="blog-nav">DBC Culture</a>
+<br>
+<a href="https://daschi.github.io/blog/t1-git-blog.html" class="blog-nav">Git, GitHub, Version Control</a>
+<br>
+<a href="https://daschi.github.io/blog/t2-css-design.html" class="blog-nav">CSS Positioning</a>
+<br>
+<a href="https://daschi.github.io/blog/t3-arrays-hashes.html" class="blog-nav">[Arrays] & {Hashes}</a>
+<br>
+<a href="https://daschi.github.io/blog/t4-enumerable-methods.html" class="blog-nav">Group_By Method</a>
+<br>
+<a href="https://daschi.github.io/blog/c4-tech-issues.html" class="blog-nav">Localization & Internationalization</a>
+<br>
+<a href="https://daschi.github.io/blog/t5-ruby-classes.html" class="blog-nav">Pizza Class</a>
+</nav>
+<!-- ***** Footer ***** -->
+<div id="footer">
+
+<footer>
+
+    <div>
+      <p><a href="mailto:daschi87@gmail.com">Talk to me!</a></p>
+    </div>
+
+    <div class="social-media">
+    <a href="https://github.com/daschi" target="_blank"><img title="GitHub" alt="GitHub" src="../imgs/GitHub.png" width="35" height="35"/></a>
+    <a href="https://twitter.com/daschi" target="_blank">
+    <img title="Twitter" alt="Twitter" src="https://socialmediawidgets.files.wordpress.com/2014/03/twitter1.png" width="35" height="35" /></a>
+    <a href="https://www.linkedin.com/in/daschi" target="_blank">
+    <img title="LinkedIn" alt="LinkedIn" src="https://socialmediawidgets.files.wordpress.com/2014/03/linkedin1.png" width="35" height="35" /></a>
+    <a href="https://www.facebook.com/daniela.anna.75" target="_blank">
+    <img title="Facebook" alt="Facebook" src="https://socialmediawidgets.files.wordpress.com/2014/03/facebook1.png" width="35" height="35" /></a>
+
+    </div>
+</footer>
+</div> <!--***** Close footer container div *****-->
+</div> <!--***** Close container div *****-->
+</body>
+</html>
+
+
+
