@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<head>
+  <title>daschi/blog</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog-stylesheet.css">
+</head>
+
+<body>
+
+<!-- The container helps to position everything on the page -->
+
+<div id="container">
+
+<!-- ***** Header ***** -->
+<div id="header">
+<header>
+<div id="head-wrap">
+    <div class="name">
+          <img src="../imgs/daniela.jpg" id="myPic" alt="my-picture"/>
+    <h1 id="title">Daniela Schiano di Cola</h1>
+    <h3 id="subtitle">build and learn<br>a bootcamp story</h3>
+    </div>
+
+<!-- ***** Site nav ***** -->
+    <nav class="site-nav">
+        <a href="https://daschi.github.io/" class="nav-item">Home</a>
+        <a href="https://daschi.github.io/blog/index.html" class="nav-item">Blog</a>
+        <a href="https://daschi.github.io/projects-page.html" class="nav-item">Projects</a>
+        <a href="https://daschi.github.io/contact-me.html" class="nav-item">Contact</a>
+    </nav>
+    </div>
+ </header>
+ </div>
+
+<!-- ***** Blog Starts ***** -->
+<div class="blog-body">
+
+  <article class="blog-content">
+
+  <div class="blog-heading">
+    <h1>Inheritance and Composition</h1>
+    <h3>The Class class is an instance of itself, the Class object is from the Object class.</h3>
+    <h4>2015-06-04</h4>
+  </div>
+
+   <h2>Inheritance</h2>
+    <p>In my last post, I talked about Ruby classes and a class's instance methods. This week, I'll take a step back from a class, and look at how a clss is born. A class is itself an instance of another class, called Class. Fun right? The Class class is also made up of its own methods, which any class created from Class has access to. This kind of access is called Inheritance, because you can think of Class as a parent, and each instance of a new class as its children, inheriting all of its traits (i.e. methods). Just like biologicall you can only inherit traits from one set of parents, in Ruby a class can only inherit methods from 1 single class. This isn't true across programming languages, since some languages allow multiple inheritances from multiple classes.</p>
+    <p>This example shows a common notation for declaring a super-class (parent class) for a subclass (child class) by using the < symbol.</p>
+    <pre>
+          class Beverage
+            def drink
+              puts "You are hydrated"
+            end
+          end
+
+          class Coffee < Beverage
+            def craft
+              puts "You're an excellent barista"
+            end
+          end
+
+        cappuccino = Coffee.new => New instance of the class Coffee
+        cappuccino.drink => "You are hydrated"
+        cappuccino.craft => "You're an excellent barista"
+     </pre>
+
+     <p>This is called <strong>Implicit Inheritance</strong>, since the class Coffee implicitly inherits all methods from the Beverage class. Even though we didn't define the drink method within the Coffee class, any new object of the Coffee class can receive the drink method, because it inherited it from Beverage. Inheritance of a superclass is created with the < symbol, where in the above example Coffee < Beverage means the Coffee class is a subclass of the Beverage class.</p>
+
+     <p>An interesting point with inheritance is that a class can <strong>override</strong> inherited methods. To do this, a subclass will change a superclass's method by rewriting it in their own class. This means that every new class can be redefined based on the original blueprints given from a superclass, or as Sandi Metz puts it in <a href="http://www.poodr.com/" target="_blank">Practical Object Oriented Design in Ruby</a>: "Subclasses are thus specializations of their superclasses."</p>
+
+     <p>So where does the class Class come from if everything is inherited from a superclass? The very root of it all comes from the BasicObject class--the parent class of all Ruby classes. This BasicObject class has very few methods.</p>
+
+     <p>The next step is to understand when and how to use inheritance. We know WHAT inheritance is, it's time to look at practical examples of WHEN to use it appropriately. For now, I think you would use inheritance when you build a class that has obvious signs of multiple categories in 1 class. This might tell you that you have 1 overarching category, and multiple subcategories(or subclasses!). I'll be learning more about this in the coming weeks, and I hope to expand on this blog about when I have more practical experience using Inheritance.</p>
+
+    <h2>Composition</h2>
+    <p>A great way to think about the difference between inheritance and composition, is to use the <a href="learnrubythehardway.org" target="_blank">Learn Ruby the Hard Way</a> sentences "is-a" and "has-a". In the earlier example, the Coffee class inherited from the Beverage class, so we can say: Coffee <strong>is-a</strong> Beverage.</p>
+    <p>So what does it mean if composition is a "has-a" phrase? Instead of creating a subclass from a superclass, composition means there is one class that is using the methods from another class. So in this case, Coffee <strong>has-a</strong> Beverage in its class definition. This allows the class Coffee to use methods from the Beverage class as it needs to, but to also define its own methods and avoid having to rewrite any of the Beverage methods.</p>
+    <pre>
+          class Beverage
+            def drink
+              puts "You are hydrated"
+            end
+          end
+
+          class Coffee
+            def initialize
+              @beverage = Beverage.new
+            end
+
+            def craft
+              puts "You're an excellent barista"
+            end
+
+            def drink 
+              @beverage.drink
+            end
+
+          end
+
+        cappuccino = Coffee.new => New instance of the class Coffee and sets the variable @beverage to a new instance of the Beverage class
+        cappuccino.drink => "You are hydrated"
+        cappuccino.craft => "You're an excellent barista"
+    </pre>
+    <p>Here you see that the Coffee class instantiates itself by setting an instance variable @beverage to a new instance of the Beverage class. When the Coffee object cappuccino receives the drink method, it's now referencing the new instance of the Beverage class that is calling the drink method from within the Beverage class. Here we see that instances of the Coffee class can use methods from the Beverage class without being inherited, and instead by using an instance of the Beverage class within its own methods. We can say that the Coffee class "has a" method from an instance of the Beverage class. </p>
+
+    <h2>Inheritance vs Composition</h2>
+    <p>So when would you use inheritance or composition? What are the various situations one is preferable over another? This is something I'm still trying to figure out, and I expect an understanding will come with practice. Based on the resources below, it seems you'd want to use composition to package modules that you can resuse in many different situations. Inheritance seems to be useful when conceptually you have a class that naturally has subclasses, so that you can keep it clear in your mind what class you need at what time and how they interact.</p>
+
+<div class="resources">
+      <h2>Additional Resources & References</h2>
+      <a href="http://learnrubythehardway.org/book/ex44.html" target="_blank">Learn Ruby the Hard Way: Inheritance vs Composition</a><br>
+      <a href="http://rubylearning.com/satishtalim/ruby_inheritance.html" target="_blank">Ruby Learning: Ruby Inheritance</a><br>
+</div>
+</article>
+</div>
+
+<!-- ***** Blog-Nav *** -->
+<nav class="navbar-default">
+<h3 id="nav-bar-title">Posts</h3>
+<a href="https://daschi.github.io/blog/c3_thinking-style.html" class="blog-nav">My Thinking Style</a>
+<br>
+<a href="https://daschi.github.io/blog/c1-chefs-kitchen.html" class="blog-nav">DBC Culture</a>
+<br>
+<a href="https://daschi.github.io/blog/t1-git-blog.html" class="blog-nav">Git, GitHub, Version Control</a>
+<br>
+<a href="https://daschi.github.io/blog/t2-css-design.html" class="blog-nav">CSS Positioning</a>
+<br>
+<a href="https://daschi.github.io/blog/t3-arrays-hashes.html" class="blog-nav">[Arrays] & {Hashes}</a>
+<br>
+<a href="https://daschi.github.io/blog/t4-enumerable-methods.html" class="blog-nav">Group_By Method</a>
+<br>
+<a href="https://daschi.github.io/blog/c4-tech-issues.html" class="blog-nav">Localization & Internationalization</a>
+<br>
+<a href="https://daschi.github.io/blog/t5-ruby-classes.html" class="blog-nav">Pizza Class</a>
+<br>
+<a href="https://daschi.github.io/blog/c5-feedback.html" class="blog-nav">Pairing and Feedback</a>
+<br>
+<a href="https://daschi.github.io/blog/t6-oop-concepts.html" class="blog-nav">Inheritance and Composition</a>
+</nav>
+
+<!-- ***** Footer ***** -->
+<div id="footer">
+
+<footer>
+
+    <div>
+      <p><a href="mailto:daschi87@gmail.com">Talk to me!</a></p>
+    </div>
+
+    <div class="social-media">
+    <a href="https://github.com/daschi" target="_blank"><img title="GitHub" alt="GitHub" src="../imgs/GitHub.png" width="35" height="35"/></a>
+    <a href="https://twitter.com/daschi" target="_blank">
+    <img title="Twitter" alt="Twitter" src="https://socialmediawidgets.files.wordpress.com/2014/03/twitter1.png" width="35" height="35" /></a>
+    <a href="https://www.linkedin.com/in/daschi" target="_blank">
+    <img title="LinkedIn" alt="LinkedIn" src="https://socialmediawidgets.files.wordpress.com/2014/03/linkedin1.png" width="35" height="35" /></a>
+    <a href="https://www.facebook.com/daniela.anna.75" target="_blank">
+    <img title="Facebook" alt="Facebook" src="https://socialmediawidgets.files.wordpress.com/2014/03/facebook1.png" width="35" height="35" /></a>
+
+    </div>
+</footer>
+</div> <!--***** Close footer container div *****-->
+</div> <!--***** Close container div *****-->
+</body>
+</html>
+
+
+
