@@ -39,13 +39,14 @@
 
   <div class="blog-heading">
     <h1>Inheritance and Composition</h1>
-    <h3>The Class class is an instance of itself, the Class object is from the Object class.</h3>
+    <h3>An intro to understanding inheritance</h3>
     <h4>2015-06-04</h4>
   </div>
 
    <h2>Inheritance</h2>
-    <p>In my last post, I talked about Ruby classes and a class's instance methods. This week, I'll take a step back from a class, and look at how a clss is born. A class is itself an instance of another class, called Class. Fun right? The Class class is also made up of its own methods, which any class created from Class has access to. This kind of access is called Inheritance, because you can think of Class as a parent, and each instance of a new class as its children, inheriting all of its traits (i.e. methods). Just like biologicall you can only inherit traits from one set of parents, in Ruby a class can only inherit methods from 1 single class. This isn't true across programming languages, since some languages allow multiple inheritances from multiple classes.</p>
-    <p>This example shows a common notation for declaring a super-class (parent class) for a subclass (child class) by using the < symbol.</p>
+    <p>In my last post, I talked about Ruby classes and instance methods. This week, I'll take a step back from a class, and look at the idea of inheritance with a class's superclass and subclass. A class is itself an instance of another class, if it's not a defined class, then it's an instance of the class Object. Fun right? The Class class is also made up of its own methods, which any class created from Class has access to, in a kind of heirarchy. This kind of access is called Inheritance, because you can think of Class as a parent, and each proceeding subclass as its children, inheriting all of its traits (i.e. methods). Although a child inherits traits from two parents, in Ruby a class can only inherit methods from one class. This isn't true across programming languages, since some languages allow multiple inheritances from multiple classes.</p>
+    \
+    <p>This example shows a common notation for declaring a super-class (parent class) for a subclass (child class) by using the < symbol. The < symbol in this example is like saying "Coffee inherited from Beverage".</p>
     <pre>
           class Beverage
             def drink
@@ -64,7 +65,7 @@
         cappuccino.craft => "You're an excellent barista"
      </pre>
 
-     <p>This is called <strong>Implicit Inheritance</strong>, since the class Coffee implicitly inherits all methods from the Beverage class. Even though we didn't define the drink method within the Coffee class, any new object of the Coffee class can receive the drink method, because it inherited it from Beverage. Inheritance of a superclass is created with the < symbol, where in the above example Coffee < Beverage means the Coffee class is a subclass of the Beverage class.</p>
+     <p>This is called <strong>Implicit Inheritance</strong>, since the class Coffee implicitly inherits all methods from the Beverage class. Even though we didn't define the drink method within the Coffee class, any new object of the Coffee class can receive the drink method, because it inherited it from Beverage.</p>
 
      <p>An interesting point with inheritance is that a class can <strong>override</strong> inherited methods. To do this, a subclass will change a superclass's method by rewriting it in their own class. This means that every new class can be redefined based on the original blueprints given from a superclass, or as Sandi Metz puts it in <a href="http://www.poodr.com/" target="_blank">Practical Object Oriented Design in Ruby</a>: "Subclasses are thus specializations of their superclasses."</p>
 
