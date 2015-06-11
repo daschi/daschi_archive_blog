@@ -25,17 +25,18 @@ html, body {
 
 header {
   width: 100%;
-  font-family: sans-serif;
   top: 0;
   display: block;
 }
 
 #head-wrap {
+  font-family: 'Mako', sans-serif;
   background-color: #5DBDF9;
   width: 100%;
   margin: 0;
   display: inline-block;
 }
+
 
 #myPic {
   float: left;
@@ -49,6 +50,7 @@ header {
 }
 
 #title {
+  font-weight: bolder;
   text-align: left;
   margin: 5px 0 0 5px;
   font-size: 15px;
@@ -61,6 +63,7 @@ header {
 }
 
 .site-nav {
+   font-family: 'Mako', sans-serif;
    font-size: 25px;
    margin: 0 10px 10px 10px;
    float: right;
@@ -99,7 +102,7 @@ a:hover {
 
 #blog-index
 {
-  font-family: sans-serif;
+  font-family: 'Mako', sans-serif;
   max-width: 900px;
   margin: 0 auto;
 }
@@ -129,7 +132,7 @@ table {
 }
 
 .blog-heading {
-	font-family: sans-serif;
+	font-family: 'Mako', sans-serif;
 	text-align: left;
 	width: 90%;
 }
@@ -179,7 +182,7 @@ figcaption{
 }
 
 .blog-content {
-	font-family: sans-serif;
+	font-family: 'Mako', sans-serif;
 	font-size: 15px;
 	text-align: left;
   position: relative;
@@ -236,7 +239,7 @@ pre .note {
 
 /*---------------- Blog Nav ---------------*/
 .navbar-default{
-  font-family: sans-serif;
+  font-family: 'Mako', sans-serif;
   background-color: #5DBDF9;
   width: 20%;
   position: fixed;
