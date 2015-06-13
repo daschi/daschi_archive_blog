@@ -131,6 +131,15 @@ input, textarea {
   width:100%;
 }
 
+#index-footer{
+  background-image: url("../imgs/lodyas.png");
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100px;
+  width:100%;
+}
+
 footer {
   margin: 10px 20px 0px 0px;
   float: right;
