@@ -3,6 +3,7 @@
   <title>daschi/blog</title>
   <meta charset="UTF-8">
   <link rel="stylesheet" type="text/css" href="../stylesheets/blog-stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
   <link href='http://fonts.googleapis.com/css?family=Mako|Expletus+Sans' rel='stylesheet' type='text/css'>
 </head>
 
@@ -13,71 +14,68 @@
 <div id="container">
 
 <!-- ***** Header ***** -->
-<div id="header">
 <header>
-<div id="head-wrap">
-    <div class="name">
-          <img src="../imgs/daniela.jpg" id="myPic" alt="my-picture"/>
-    <h1 id="title">Daniela Schiano di Cola</h1>
+<div id="header-container">
+  <div class="inner-header">
+    <div class="title">
+    <h1 id="name"><a href="https://daschi.github.io/">Daniela Schiano di Cola</a></h1>
     <h3 id="subtitle">build and learn<br>a bootcamp story</h3>
     </div>
 
-<!-- ***** Site nav ***** -->
-    <nav class="site-nav">
+<!-- ********** Web site nav ************ -->
+    <div class="site-nav">
         <a href="https://daschi.github.io/" class="nav-item">Home</a>
         <a href="https://daschi.github.io/blog/index.html" class="nav-item">Blog</a>
-        <a href="https://daschi.github.io/projects-page.html" class="nav-item">Projects</a>
-    </nav>
+        <a href="https://daschi.github.io/projects/index.html" class="nav-item">Projects</a>
     </div>
- </header>
- </div>
-
-<div class="blog-body">
-
-  
-
-  <div class="blog-content">
-<div class="blog-heading">
-    <h1>How to Master the Normal Flow of a Web Page</h1>
-    <h3>A Look into CSS Position: Static, Fixed, Absolute, Relative</h3>
-    <h4>2015-05-10</h4>
+    </div>
   </div>
+ </header>
+
+<!-- ********** Blog Body ************ -->
+<div id="blog-body">
+  <article class="blog-post">
+      <div class="blog-heading">
+        <h1>How to Master the Normal Flow of a Web Page</h1>
+        <h3>A Look into CSS Position: Static, Fixed, Absolute, Relative</h3>
+        <h4>2015-05-10</h4>
+      </div>
   
-    <h2 class="p-heading">Introduction</h2>
-      <p class="break-line">This blog post will focus on the different values of [position] in CSS and how to use them to determine the layout of your web page. <br>A web page uses HTML (Hypertext Markup Language) to structure the skeleton of a web page's elements and CSS (Cascading Style Sheets) is like the skin, hair and make-up. After typing that I realize it's kind of a creepy analogy, but it works for me so I'm keeping it!<br> The CSS is written in a different file called a stylesheet, that is then linked to the HTML file. This stylesheet makes all of your HTML elements look the way you want them to, and stylizes them based on the design attributes you apply.
+      <h2>Introduction</h2>
+      <p>This blog post will focus on the different values of [position] in CSS and how to use them to determine the layout of your web page. <br>A web page uses HTML (Hypertext Markup Language) to structure the skeleton of a web page's elements and CSS (Cascading Style Sheets) is like the skin, hair and make-up. After typing that I realize it's kind of a creepy analogy, but it works for me so I'm keeping it!<br> The CSS is written in a different file called a stylesheet, that is then linked to the HTML file. This stylesheet makes all of your HTML elements look the way you want them to, and stylizes them based on the design attributes you apply.
       <br>The most challenging part about learning CSS for me was figuring out how to position everything on the page. Anytime I watch a tutorial or read an article on the topic, it seems so EASY and intuitive, and then in practice it takes hours and hours of trial and error. I am writing this post on the position values Absolute, Fixed, Static, and Relative because this is what I've been struggling to understand the most. The key I've found is understanding the normal flow of a web page, and how everything relates directly (or sometimes not at all!) to the elusive normal flow.
       <br>This post will be an adventure for me and you! I will test each of these positions and try to eventually create 1 page that uses all of them successfully. My objective is to present the position value's function within the normal flow, and then the reason why you would use it instead of another value (or instead of a float). </p>
      
-    <h2 class="p-heading">Position: Static</h2> 
-      <p class="break-line">[static] is the default value for your element block positions. If you don't change the position value, it will default to static. Static position stacks each block element one on top of the other. You should imagine the web page as a grid, where each HTML element takes up space horizontally on that grid. If you have more than one element, the static position puts them on their own individual line, one under another. <br>I've created 4 block elements to demonstrate each position, below you'll see a header, site nav, body and footer element without any position specified. This means it appears as static position. Here I've specified width and height. If you don't, the block will span the length of the page automatically.<br>
+    <h2>Position: Static</h2> 
+      <p>[static] is the default value for your element block positions. If you don't change the position value, it will default to static. Static position stacks each block element one on top of the other. You should imagine the web page as a grid, where each HTML element takes up space horizontally on that grid. If you have more than one element, the static position puts them on their own individual line, one under another. <br>I've created 4 block elements to demonstrate each position, below you'll see a header, site nav, body and footer element without any position specified. This means it appears as static position. Here I've specified width and height. If you don't, the block will span the length of the page automatically.<br>
       <img src="../imgs/static_css.png" alt="Static Position" class="body-image"/>
       <img src="../imgs/static_browser.png" alt="Static Position" class="body-image"/>
 
       <br>Static position is good to use when you have elements that need to sit one on top of another, like in a single-column layout. The problem is that static is STATIC. If later on you decide you want to shift an element to the left or right, you'll need to choose a different type of position. Also good to note--the elements within an element set to static, will also be static. </p>
 
-   <h2 class="p-heading">Position: Relative</h2> 
-      <p class="break-line">[relative] positioned elements are very similar to static elements, the difference is there's more flexibility compared to static (hey, it's all relative!) Remember when I said for static that you can't move elements left or right at all? Well, with relative you can! You use the offset properties [top], [right], [bottom] and [left] to "offset" the blocks. The key here is figuring out what you're setting it off of. If you have all your elements set to relative, and the offset one of them, it will not affect the other elements' positions. Check out the image below, I've set the yellow block to offset left by 500px, and everything else is kept relative at 0 offset:<br>
+   <h2>Position: Relative</h2> 
+      <p>[relative] positioned elements are very similar to static elements, the difference is there's more flexibility compared to static (hey, it's all relative!) Remember when I said for static that you can't move elements left or right at all? Well, with relative you can! You use the offset properties [top], [right], [bottom] and [left] to "offset" the blocks. The key here is figuring out what you're setting it off of. If you have all your elements set to relative, and the offset one of them, it will not affect the other elements' positions. Check out the image below, I've set the yellow block to offset left by 500px, and everything else is kept relative at 0 offset:<br>
       <img src="../imgs/relative_browser.png" alt="relative Position" class="body-image"/>
       <img src="../imgs/relative_css.png" alt="relative Position" class="body-image"/>
       <br>Another interesting feature for the [relative] position is that it let's you offset a block based on the position of its parent element. Take a look at what happens when we move one of the block elements inside another, and apply the same offset:<br>
       <img src="../imgs/offset_browser.png" alt="relative Position" class="body-image"/>
       <br>See what happened? I kept the yellow box offset at 500px and I offset the orange box 100px. These both moved left relative to the page edge. The red box I placed within the orange box's [div] element so it became a child of the orange box. Since it's a child in relative position, the left offset of 500px is then based on the position of the orange box and not the edge of the page. That's why even though both the red box and the yellow box are both left offset by 500px, the red one is further out (the orange box pushed it!). </p>
 
-    <h2 class="p-heading">Position: Absolute</h2> 
-      <p class="break-line">[absolute] position--just as it sounds, can position your elements absolutely where you want them to be, no matter what. An absolute position will take the element OUT of the normal flow and place it where you want it. This leads me to think there's consequences to using absolute, such as losing static or relative elements underneath! The Absolute position will cover anything that is in its way, and will not shift it to another position, so be careful of that! You can understand this as a block that won't affect or be affected by any other element. In order to get the most out of your absolute position, use the [top], [bottom], [left], and [right] properties. Just like in relative--offset boxes are in relation to the parent element.
+    <h2>Position: Absolute</h2> 
+      <p>[absolute] position--just as it sounds, can position your elements absolutely where you want them to be, no matter what. An absolute position will take the element OUT of the normal flow and place it where you want it. This leads me to think there's consequences to using absolute, such as losing static or relative elements underneath! The Absolute position will cover anything that is in its way, and will not shift it to another position, so be careful of that! You can understand this as a block that won't affect or be affected by any other element. In order to get the most out of your absolute position, use the [top], [bottom], [left], and [right] properties. Just like in relative--offset boxes are in relation to the parent element.
       <br>Look at the image--here you'll see 2 things, all the boxes are absolutely placed on the page, and the red box (child of the orange box) moves with the orange box. You can see this in the CSS, since the red box does not have any top or left offset specified:<br>
       <img src="../imgs/absolute_browser.png" alt="Absolute Position" class="body-image"/>
       <img src="../imgs/absolute_css.png" alt="Absolute Position" class="body-image"/>
       </p>
-    <h2 class="p-heading">Position: Fixed</h2> 
+    <h2>Position: Fixed</h2> 
       <p>The <code>fixed</code> position is very similar to <code>absolute</code> except that it stays put no matter what you move on the web page. For example, a footer in the fixed position at the bottom of the page will always be visible and present. Other elements move behind a fixed element. Note, fixed position is not always supported in older browsers!</p>
     
-    <h2 class="p-heading">All positions at once!</h2> 
-    <p class="break-line">Now, here's an example where I used each of these positions in one page to see how they work together.<br>
+    <h2>All positions at once!</h2> 
+    <p>Now, here's an example where I used each of these positions in one page to see how they work together.<br>
      <img src="../imgs/all_browser.png" alt="All Position" class="body-image"/>
      <img src="../imgs/all_css.png" alt="All Position" class="body-image"/>
      </p>
-    </div>
+    </article>
    </div>
 <!-- ***** Blog-Nav *** -->
 <nav class="navbar-default">
@@ -108,23 +106,18 @@
 </nav>
 <!-- ***** Footer ***** -->
 <div id="footer">
-
 <footer>
-
-    <div>
-      <p><a href="mailto:daschi87@gmail.com">Talk to me!</a></p>
-    </div>
-
     <div class="social-media">
-    <a href="https://github.com/daschi" target="_blank"><img title="GitHub" alt="GitHub" src="../imgs/GitHub.png" width="35" height="35"/></a>
-    <a href="https://twitter.com/daschi" target="_blank">
-    <img title="Twitter" alt="Twitter" src="https://socialmediawidgets.files.wordpress.com/2014/03/twitter1.png" width="35" height="35" /></a>
-    <a href="https://www.linkedin.com/in/daschi" target="_blank">
-    <img title="LinkedIn" alt="LinkedIn" src="https://socialmediawidgets.files.wordpress.com/2014/03/linkedin1.png" width="35" height="35" /></a>
-    <a href="https://www.facebook.com/daniela.anna.75" target="_blank">
-    <img title="Facebook" alt="Facebook" src="https://socialmediawidgets.files.wordpress.com/2014/03/facebook1.png" width="35" height="35" /></a>
-
+      <a href="https://github.com/daschi" target="_blank"><img title="GitHub" alt="GitHub" src="imgs/GitHub.png" width="35" height="35"/></a>
+      <a href="https://twitter.com/daschi" target="_blank"><img title="Twitter" alt="Twitter" src="https://socialmediawidgets.files.wordpress.com/2014/03/twitter1.png" width="35" height="35" /></a>
+      <a href="https://www.linkedin.com/in/daschi" target="_blank"><img title="LinkedIn" alt="LinkedIn" src="https://socialmediawidgets.files.wordpress.com/2014/03/linkedin1.png" width="35" height="35" /></a>
+      <a href="https://www.facebook.com/daniela.anna.75" target="_blank"><img title="Facebook" alt="Facebook" src="https://socialmediawidgets.files.wordpress.com/2014/03/facebook1.png" width="35" height="35" /></a>
     </div>
+
+    <div id="dbc">
+      <p>I designed this site during <a href="http://devbootcamp.com/">Dev Bootcamp!</a></p>
+    </div>
+
 </footer>
 </div> <!--***** Close footer container div *****-->
 </div> <!--***** Close container div *****-->

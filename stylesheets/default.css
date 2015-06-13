@@ -1,20 +1,17 @@
-@charset "UTF-8";
 /* ------------------ Page Structure ------------------ */
+@charset "UTF-8";
 
 * {
-  padding:0;
   margin:0;
-}
-
-html {
-  background-color: #FDFFFE;
-  width: 100%
+  padding:0;
 }
 
 html, body {
-  margin: 0;
-  padding: 0;
+  background-image: url("../imgs/subtle_waves.png");
+  background-repeat: repeat;
+  font-family: 'Mako', sans-serif;
   height: 100%;
+  width: 100%;
 }
 
 #container {
@@ -22,124 +19,129 @@ html, body {
   position: relative;
 }
 
-/* ------------------ Header ------------*/
-#header {
-  padding: 0px ;
-}
-
+/* ------------------ Homepage Header ------------*/
 header {
+  background-image: url("../imgs/lodyas.png");
+  color: #F95D5E;
   width: 100%;
-  font-family: 'Mako', sans-serif;
-  top: 0;
-  display: block;
-  border-bottom:1px solid #eee;
 }
 
-#head-wrap {
-  background-color: #5DBDF9;
-  width: 100%;
-  margin: 0;
+.inner-header {
   display: inline-block;
+  width: 100%;
 }
 
-.name {
+.title {
   float: left;
-  width: 40%
+  padding-left: 1%;
+  text-align: left;
+  width: 40%;
 }
 
-#title {
-  text-align: left;
-  margin: 0 0 0 5px;
-  font-size: 20px
+#name {
+  font-size: 20px;
+  margin-left: 5px;
 }
 
 #subtitle {
-  text-align: left;
-  margin: 5px;
   font-size: 15px;
-  margin-top: 10px;
+  margin: 5px;
 }
 
 .site-nav {
-   font-size: 25px;
-   margin: 0 10px 10px 10px;
-   float: right;
-   padding-top: 20px;
+  float: right;
+  font-size: 25px;
+  margin: 20px;
 }
 
 .nav-item {
-  padding: 10px;
+  padding: 15px;
 }
-
 
 /*------------- Links ---------------------*/
 
 a:link {
   color: #F95D5E;
   text-decoration: none;
-  }
+}
 
 a:visited {
-  color: #B94546;
+  color: #F95D5E;
 }
 
-a:hover {
-  color: #3A1616;
-}
-
-/*----------------- About Me ---------------*/
-#body {
-  padding: 20px;
+/*----------------- Body ---------------*/
+.body {
+  display: inline-block;
+  padding: 40px;
   margin: 0 auto;
-  max-width: 1000px;
-  display:block;
+  max-width: 100%;
 }
-
-section {
-  font-family: 'Mako', sans-serif;
-  width: 100%;
-  }
 
 .intro {
   display: inline-block;
-  margin: 0 1.5%;
   width: 100%;
-    border-bottom:1px solid #eee;
-}
-
-p.aboutMe{
-  margin-right: 15%;
 }
 
 .aboutMe{
-  margin: 0 10px 10px 0;
-  width: 70%;
+  margin-right: 10%;
+  width: 80%;
 }
 
 #myPic {
   float: left;
-  width: 20%;
-  padding: 5px 10px 5px 0px;
-  margin: 5px 20px 5px 0px;
+  max-width: 15%;
+  margin: 5px 15px 5px 0px;
 }
-/*------- Upcoming Events ------------*/
 
+/*------------Email Form----------------------*/
+fieldset {
+  border: 2px solid gray;
+  border-radius: 10px;
+  width: 300px;
+  padding: 15px;
+  background-color: #eee;
+}
+
+input, textarea {
+  float: right;
+  border: none;
+}
+
+.form-label {
+  padding-bottom: 10px;
+  height: 100%;
+  display: inline-block;
+  width: 100%;
+}
+
+.form {
+  margin: 5%;
+  display: block;
+}
+
+/*---------------- Events ----------------*/
 
 /*----------------- Footer ---------------*/
-footer{
-  margin: 10px 20px 0px 0;
-  float: right;
-}
-
 #footer{
-  background-color: #eee;
-  position: absolute;
+  background-image: url("../imgs/lodyas.png");
+  position: relative;
   bottom: 0;
   left: 0;
   height: 100px;
   width:100%;
 }
 
+footer {
+  margin: 10px 20px 0px 0px;
+  float: right;
+}
+
+#dbc{
+  margin: 10px 20px 0px 0px;
+  clear: right;
+}
+
 .social-media {
-  margin-right: 20px;
+  float: right;
+  margin: 20px 20px 10px 0px;
 }

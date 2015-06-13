@@ -3,6 +3,7 @@
   <title>daschi/blog</title>
   <meta charset="UTF-8">
   <link rel="stylesheet" type="text/css" href="../stylesheets/blog-stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
   <link href='http://fonts.googleapis.com/css?family=Mako|Expletus+Sans' rel='stylesheet' type='text/css'>
 </head>
 
@@ -13,38 +14,35 @@
 <div id="container">
 
 <!-- ***** Header ***** -->
-<div id="header">
 <header>
-<div id="head-wrap">
-    <div class="name">
-          <img src="../imgs/daniela.jpg" id="myPic" alt="my-picture"/>
-    <h1 id="title">Daniela Schiano di Cola</h1>
+<div id="header-container">
+  <div class="inner-header">
+    <div class="title">
+    <h1 id="name"><a href="https://daschi.github.io/">Daniela Schiano di Cola</a></h1>
     <h3 id="subtitle">build and learn<br>a bootcamp story</h3>
     </div>
 
-<!-- ***** Site nav ***** -->
-    <nav class="site-nav">
+<!-- ********** Web site nav ************ -->
+    <div class="site-nav">
         <a href="https://daschi.github.io/" class="nav-item">Home</a>
         <a href="https://daschi.github.io/blog/index.html" class="nav-item">Blog</a>
-        <a href="https://daschi.github.io/projects-page.html" class="nav-item">Projects</a>
-    </nav>
+        <a href="https://daschi.github.io/projects/index.html" class="nav-item">Projects</a>
     </div>
- </header>
- </div>
-
-<div class="blog-body">
-<article class="blog-content">
-  <div class="blog-heading">
-    <h1>Issues in Tech: Localization</h1>
-    <h3>Localizing software for language and culture</h3>
-    <h4>2015-05-24</h4>
+    </div>
   </div>
-  
-      <img src="../imgs/localize.png" alt="localize" class="blog-image"/>
-
-   <h2>Localization and Internationalization</h2>
+ </header>
+<!-- ********** Blog Body ************ -->
+<div id="blog-body">
+  <article class="blog-post">
+    <div class="blog-heading">
+      <h1>Issues in Tech: Localization</h1>
+      <h3>Localizing software for language and culture</h3>
+      <h4>2015-05-24</h4>
+    </div>
+    <img src="../imgs/localize.png" alt="localize" class="blog-image"/>
+    <h2>Localization and Internationalization</h2>
     <p>This week in DevBootcamp, we are asked to select an issue in the tech industry to write about. Instinctually my mind wandered to issues like women in tech, diversity in tech, educational opportunities for the low-income students to be exposed to tech, etc. Don't get me wrong, I could go on and on for hours on those topics, which is why I've decided to talk about something I've been marginally involved with in the past year, but don't particularly know too many details about.</p> 
-    That's why I'll try to focus this post on localization and internationalization of software and applications. I know a bit because I've been a localization project manager for the past year, which means I worked with various (tech company) clients to localize and internationalize their software, web/mobile apps, and sites into whichever languages are needed for their market. I've heard many times from engineers in the field that it's particularly difficult to write a program that will later be internationalized. My quest for today is to find out some reasons why it is difficult to internationalize code.</p>
+    <p>That's why I'll try to focus this post on localization and internationalization of software and applications. I know a bit because I've been a localization project manager for the past year, which means I worked with various (tech company) clients to localize and internationalize their software, web/mobile apps, and sites into whichever languages are needed for their market. I've heard many times from engineers in the field that it's particularly difficult to write a program that will later be internationalized. My quest for today is to find out some reasons why it is difficult to internationalize code.</p>
 
     <h2>What are Localization and Internationalization?</h2>
     <h3>Localization: L10n</h3>
@@ -55,9 +53,7 @@
     <p>Internationalization is done by developers, and is the process of reviewing a program's files to make sure the code ready for localization.This could include pulling out content from within code (i.e. removing user interface text from Javascript), supporting local standards, such as date, time and currency, and handling Unicode or other character encoding standards. This process would ideally create a new, global product can be localized to support any locale and target country's needs.</p>
     
     <h3>Issues related to Internationalizing Code</h3>
-
     <p>So in my breakdown of internationalization and localization, I hinted at some potential issues developers face while preparing content for translation. For one, if a software or app may eventually become localized, this should be taken into account in they first planning stages of the application and site. This will save a lot of time and effort in the future to retroactively make your software localizeable.</p>
-
     <p>Here are some other issues or considerations for internationalizing code that may be interesting:</p>
     <ul>
     <li>Encoding</li>
@@ -75,21 +71,22 @@
     <li>Sorting</li>
     <p>Think about sorting A-Z, with all the letters in the Turkish alphabet. What about with Chinese characters?</p>
     </ul>
-
-    <p>Caveat: There is a HUGE amount of information about this, so what I've said here may or may not be accurate. END CAVEAT</p>
     <p>I'm still learning, so although many of my "issues" sound very authoritative, think of them more as questions to open the dialogue of what we need to do to localize software.</p>
- <div class="resources">
+    <div class="resources">
       <h2>Additional Resources & References</h2>
-      <a href="http://www.w3.org/International/questions/qa-i18n" target="_blank">W3C: Localization vs. Internationalization</a><br>
-      <a href="http://www.gala-global.org/" target="_blank">GALA: Globalization and Localization Association</a><br>
-      <a href="http://edutechwiki.unige.ch/en/Software_localization" target="_blank">EduTech Wiki: Software Localization</a><br>
-      <a href="http://www.smashingmagazine.com/2012/07/18/12-commandments-software-localization/" target="_blank">Smashing Magazine: Twelve Commandments of Software Localization</a><br>
-      </div>
+      <a href="http://www.w3.org/International/questions/qa-i18n" target="_blank">W3C: Localization vs. Internationalization</a>
+      <br>
+      <a href="http://www.gala-global.org/" target="_blank">GALA: Globalization and Localization Association</a>
+      <br>
+      <a href="http://edutechwiki.unige.ch/en/Software_localization" target="_blank">EduTech Wiki: Software Localization</a>
+      <br>
+      <a href="http://www.smashingmagazine.com/2012/07/18/12-commandments-software-localization/" target="_blank">Smashing Magazine: Twelve Commandments of Software Localization</a>
+      <br>
+    </div>
     </article>
  </div>
 
  <!-- ***Blog nav*** -->
-
 <nav class="navbar-default">
 <h3 id="nav-bar-title">Posts</h3>
 <a href="https://daschi.github.io/blog/c3_thinking-style.html" class="blog-nav">My Thinking Style</a>
@@ -116,25 +113,21 @@
 <br>
 <a href="https://daschi.github.io/blog/c7-values.html" class="blog-nav">My Values</a>
 </nav>
+
 <!-- ***** Footer ***** -->
 <div id="footer">
-
 <footer>
-
-    <div>
-      <p><a href="mailto:daschi87@gmail.com">Talk to me!</a></p>
-    </div>
-
     <div class="social-media">
-    <a href="https://github.com/daschi" target="_blank"><img title="GitHub" alt="GitHub" src="../imgs/GitHub.png" width="35" height="35"/></a>
-    <a href="https://twitter.com/daschi" target="_blank">
-    <img title="Twitter" alt="Twitter" src="https://socialmediawidgets.files.wordpress.com/2014/03/twitter1.png" width="35" height="35" /></a>
-    <a href="https://www.linkedin.com/in/daschi" target="_blank">
-    <img title="LinkedIn" alt="LinkedIn" src="https://socialmediawidgets.files.wordpress.com/2014/03/linkedin1.png" width="35" height="35" /></a>
-    <a href="https://www.facebook.com/daniela.anna.75" target="_blank">
-    <img title="Facebook" alt="Facebook" src="https://socialmediawidgets.files.wordpress.com/2014/03/facebook1.png" width="35" height="35" /></a>
-
+      <a href="https://github.com/daschi" target="_blank"><img title="GitHub" alt="GitHub" src="imgs/GitHub.png" width="35" height="35"/></a>
+      <a href="https://twitter.com/daschi" target="_blank"><img title="Twitter" alt="Twitter" src="https://socialmediawidgets.files.wordpress.com/2014/03/twitter1.png" width="35" height="35" /></a>
+      <a href="https://www.linkedin.com/in/daschi" target="_blank"><img title="LinkedIn" alt="LinkedIn" src="https://socialmediawidgets.files.wordpress.com/2014/03/linkedin1.png" width="35" height="35" /></a>
+      <a href="https://www.facebook.com/daniela.anna.75" target="_blank"><img title="Facebook" alt="Facebook" src="https://socialmediawidgets.files.wordpress.com/2014/03/facebook1.png" width="35" height="35" /></a>
     </div>
+
+    <div id="dbc">
+      <p>I designed this site during <a href="http://devbootcamp.com/">Dev Bootcamp!</a></p>
+    </div>
+
 </footer>
 </div> <!--***** Close footer container div *****-->
 </div> <!--***** Close container div *****-->
