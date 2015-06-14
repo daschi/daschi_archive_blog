@@ -34,54 +34,90 @@
 
 <!-- ***** Blog Starts ***** -->
 <div id="blog-body">
-
   <article class="blog-post">
+    <div class="blog-heading">
+      <h1>Dear Ruby, you've been missed.<br>Oh, hello JavaScript.</h1>
+      <h4>2015-06-13</h4>
+    </div>
 
-Identify one fundamental difference between how Ruby and JavaScript do something, and teach your audience about it. There are many ways you can look at this. Here are some ideas:
+      <h2>Comparing the Ruby Class to the JavaScript Constructor Function</h2>
 
-Ruby Hashes vs. JavaScript Objects
-Ruby classes vs. JavaScript constructor functions
-Ruby documentation vs. JavaScript documentation
-Looping in Ruby vs. Looping in JavaScript
-I'm sure you can think of many more examples.
+      <p>No offense JavaScript, I'm sure you're amazing, it's just that I've been spending the past few weeks with Ruby and I thought we really had something going there for a second. Then you come along and teach me that love is not easy. There is work to do. You're not completely foreign to me, but there are some distinct differences and similarities between you and Ruby. For one thing--objects. Whereas almost everything in Ruby is an object, you are very specific about what is or is not considered an object. Okay, enough talking to you JS, I have thousands of readers (right??) to talk to who are dying to read a bit about what makes you unique from Ruby.</p>
 
-write a blog or video
+      <h2>Review of the Ruby Class and Object</h2>
+      <p>Before I dive into the differences between the Ruby Class and JavaScript Constructor Function, I'll quickly review the Ruby Class. A Ruby Class can be considered a collection of properties and methods that instantiate an object. That object then inherits the properties and methods of its class. I read somewhere that you can think of the collection of properties like a Ruby hash, where you can use the instance variables of a class as the key to access the property's value. Something like this:
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">      <span style="color: #66d9ef">class</span> <span style="color: #a6e22e">Person</span>
 
-  <div class="blog-heading">
-    <h1>Ruby Classes and JavaScript Constructor Functions</h1>
-    <h4>2015-06-12</h4>
-  </div>
+        <span style="color: #66d9ef">def</span> <span style="color: #a6e22e">initialize</span><span style="color: #f8f8f2">(name,</span> <span style="color: #f8f8f2">age)</span>
+          <span style="color: #f8f8f2">@name</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">name</span>
+          <span style="color: #f8f8f2">@age</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">age</span>
+        <span style="color: #66d9ef">end</span>
 
-   <h2>ODE TO RUBY</h2>
-    <p>Ruby Classes, oh how I miss thee,</p>
-    <p>Your lithe definition so brisk and limber</p>
-    <p>Tell me all your accessors!</p>
-    <p>For I must know when the sun is set,</p>
-    <p>Or if simply a sun to get...</p>
-    <p>Let me initialize you to the wonders of the world</p>
-    <p>Each instance you will become a new....instance</p>
-    <p>Inheriting everything, and likely overriding some</p>
-    <p>Ride on! Ride on Ruby! Don't be dismayed for you</p>
-    <p>are loved!</p>
-    <p>Loved, perhaps, dare I say, more than</p>
-    <p>These so-called JavaScript constructors or functions or what have you</p>
-    <p>What do they, pray tell, know about creating new instances?</p>
-    <p>About setting and getting?</p>
-    <p>About instance methods?
-    <p>....everything, you say? They know everything?</p>
-    <p>Well, we'll see about that!</p>
+        <span style="color: #66d9ef">def</span> <span style="color: #a6e22e">name</span>
+          <span style="color: #f8f8f2">@name</span>
+        <span style="color: #66d9ef">end</span>
 
-    <p>BLOG CONTENT PARAGRAPH 1</p>
+        <span style="color: #66d9ef">def</span> <span style="color: #a6e22e">age</span>
+          <span style="color: #f8f8f2">@age</span>
+        <span style="color: #66d9ef">end</span>
 
+      <span style="color: #66d9ef">end</span>
+
+      <span style="color: #f8f8f2">leon_obj</span> <span style="color: #f92672">=</span> <span style="color: #66d9ef">Person</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">new(</span><span style="color: #e6db74">&quot;Leon&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">27</span><span style="color: #f8f8f2">)</span>
+      <span style="color: #f8f8f2">leon_obj</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">name</span>
+      <span style="color: #f92672">=&gt;</span> <span style="color: #e6db74">&quot;Leon&quot;</span>
+</pre></div>
+
+      <p>As you can see, we accessed the Leon object's name by defining it as an instance variable, so it works similar to a method. Ruby uses classes a lot to organize its information about an object, including both attributes and methods. Methods are like functions for an object, they give the object its behavior. Every object in Ruby comes from a class, and there are several built in classes like Fixnum, Object, and String. </p> 
+
+      <h2>The JavaScript Constructor</h2>
+      <p>The JavaScript Constructor is similar to a Ruby Class in that you can create new instances of a JavaScript object from the constructor. Calling a JavaScript constructor function does the following things (and I'm sure more):
       <ul class="list">
-        <li>LIST ITEMS</li></ul>
-     
-      <ol>
-        <li>LIST ITEMS</li></ol>
+        <li>Creates new objects</li>
+        <li>Sets up a constructor property for the new object</li>
+        <li>Sets the object to respond to the prototype of the constructor</li>
+      </ul>
+     <p>Like the Ruby Class, a JavaScript constructor function also looks like a data structure with properties and functions.</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">     <span style="color: #66d9ef">function</span> <span style="color: #a6e22e">Person</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">name</span><span style="color: #f8f8f2">,</span> <span style="color: #a6e22e">age</span><span style="color: #f8f8f2">)</span> <span style="color: #f8f8f2">{</span>
+        <span style="color: #66d9ef">this</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">name</span> <span style="color: #f92672">=</span> <span style="color: #a6e22e">name</span><span style="color: #f8f8f2">;</span>
+        <span style="color: #66d9ef">this</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">age</span> <span style="color: #f92672">=</span> <span style="color: #a6e22e">age</span><span style="color: #f8f8f2">;</span>
+     <span style="color: #f8f8f2">}</span>
+
+     <span style="color: #a6e22e">leon_obj</span> <span style="color: #f92672">=</span> <span style="color: #66d9ef">new</span> <span style="color: #a6e22e">Person</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;Leon&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">27</span><span style="color: #f8f8f2">);</span>
+     <span style="color: #a6e22e">leon_obj</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">name</span><span style="color: #f8f8f2">;</span>
+     <span style="color: #f92672">=&gt;</span><span style="color: #e6db74">&#39;Leon&#39;</span>
+</pre></div>
+
+     <p>This looks super similar to the Ruby Class way to create objects. What's the difference? Well, for one thing, inheritance is handled differently in JavaScript. Instead of class inheritance, JavaScript has a prototype object that is basically an empty object created with each constructor function.</p>
+     <p>Also, notice this <code>this</code> keyword? This is similar to <code>self</code> in Ruby, and it's saying whichever object is in focus, apply this variable assignment.</p>
+     <p>Back to the prototype, from what I can tell so far, it looks like you can use the prototype property of a constructor function to modify the constructor.</p>
+     <pre>
+<!-- HTML generated using hilite.me --><!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #66d9ef">function</span> <span style="color: #a6e22e">Person</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">name</span><span style="color: #f8f8f2">,</span> <span style="color: #a6e22e">age</span><span style="color: #f8f8f2">)</span> <span style="color: #f8f8f2">{</span>
+  <span style="color: #66d9ef">this</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">name</span> <span style="color: #f92672">=</span> <span style="color: #a6e22e">name</span><span style="color: #f8f8f2">;</span>
+  <span style="color: #66d9ef">this</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">age</span> <span style="color: #f92672">=</span> <span style="color: #a6e22e">age</span><span style="color: #f8f8f2">;</span>
+ <span style="color: #f8f8f2">}</span>
+
+<span style="color: #a6e22e">Person</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">prototype</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">{</span>
+  <span style="color: #a6e22e">sayHi</span><span style="color: #f92672">:</span> <span style="color: #66d9ef">function</span> <span style="color: #a6e22e">sayHi</span><span style="color: #f8f8f2">()</span> <span style="color: #f8f8f2">{</span>
+      <span style="color: #66d9ef">return</span> <span style="color: #e6db74">&quot;Hello!&quot;</span><span style="color: #f8f8f2">;</span>
+   <span style="color: #f8f8f2">}</span>
+<span style="color: #f8f8f2">}</span>
+
+<span style="color: #a6e22e">leon_obj</span><span style="color: #f8f8f2">.</span><span style="color: #66d9ef">new</span> <span style="color: #a6e22e">Person</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;Leon&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">27</span><span style="color: #f8f8f2">);</span>
+<span style="color: #a6e22e">leon_obj</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">sayHi</span><span style="color: #f8f8f2">();</span>
+<span style="color: #f92672">=&gt;</span> <span style="color: #e6db74">&quot;Hello!&quot;</span>
+</pre></div></pre>
+
+<!-- END CODE PREVIEW -->
 
 <div class="resources">
       <h2>Additional Resources & References</h2>
-      <a href="http://www.globalnerdy.com/2008/08/31/enumerating-enumerable-enumerablegroup_by/" target="_blank">Enumerating Enumerables: Group By</a><br>
+      <a href="http://stantona.github.io/blog/2012/12/20/a-tale-of-two-object-models-javascript-and-ruby-part-2/" target="_blank">A Tale of Two Object Models: JavaScript and Ruby</a><br>
+      <a href="http://raganwald.com/2013/02/10/prototypes.html" target="_blank">Classes vs. Prototypes in JavaScript</a><br>
+      <a href="http://raganwald.com/2013/02/10/prototypes.html" target="_blank">Classes vs. Prototypes in JavaScript</a><br>
+      <a href="http://agentcooper.github.io/js-ruby-comparison/" target="_blank">Ruby JavaScript Comparison</a><br>
+      <a href="http://pivotallabs.com/javascript-constructors-prototypes-and-the-new-keyword/" target="_blank">JavaScript Constructors, prototypes and the new keyword</a><br>
 </div>
 </article>
 </div>

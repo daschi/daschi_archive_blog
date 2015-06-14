@@ -51,16 +51,16 @@
 
   <h2>PIZZA Class!</h2>
   <p>Here's a simple example of how a class, object and method are set up using PIZZA as our class name and object.</p>
-  <pre>
-  class Pizza <span class="note">#1</span>
-  attr_accessor :size, :style, :toppings <span class="note">#2</span>
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">  <span style="color: #66d9ef">class</span> <span style="color: #a6e22e">Pizza</span> <span style="color: #f92672">&lt;</span><span style="color: #f8f8f2">span</span> <span style="color: #f8f8f2">class</span><span style="color: #f92672">=</span><span style="color: #e6db74">&quot;note&quot;</span><span style="color: #f92672">&gt;</span><span style="color: #75715e">#1&lt;/span&gt;</span>
+  <span style="color: #66d9ef">attr_accessor</span> <span style="color: #e6db74">:size</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">:style</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">:toppings</span> <span style="color: #f92672">&lt;</span><span style="color: #f8f8f2">span</span> <span style="color: #f8f8f2">class</span><span style="color: #f92672">=</span><span style="color: #e6db74">&quot;note&quot;</span><span style="color: #f92672">&gt;</span><span style="color: #75715e">#2&lt;/span&gt;</span>
   
-  def initialize <span class="note">#3</span>
-        @size = size <span class="note">#4</span>
-        @style = style
-        @toppings = []
-  end
-  </pre>  
+  <span style="color: #66d9ef">def</span> <span style="color: #a6e22e">initialize</span> <span style="color: #f92672">&lt;</span><span style="color: #f8f8f2">span</span> <span style="color: #f8f8f2">class</span><span style="color: #f92672">=</span><span style="color: #e6db74">&quot;note&quot;</span><span style="color: #f92672">&gt;</span><span style="color: #75715e">#3&lt;/span&gt;</span>
+        <span style="color: #f8f8f2">@size</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">size</span> <span style="color: #f92672">&lt;</span><span style="color: #f8f8f2">span</span> <span style="color: #f8f8f2">class</span><span style="color: #f92672">=</span><span style="color: #e6db74">&quot;note&quot;</span><span style="color: #f92672">&gt;</span><span style="color: #75715e">#4&lt;/span&gt;</span>
+        <span style="color: #f8f8f2">@style</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">style</span>
+        <span style="color: #f8f8f2">@toppings</span> <span style="color: #f92672">=</span> <span style="color: #f92672">[]</span>
+  <span style="color: #66d9ef">end</span>
+</pre></div>
+ 
   <ol>
     <li>This creates a class named Pizza</li>
     <li>Then, the attr_accessor creates read/write instance variables for size, style and toppings. This lets you decide if the variables can be set to something different later on in the methods.</li>
@@ -76,49 +76,49 @@
   <li>Pizza#eat_slices</li>
 </ul>
 <p>If we were to start with the two, #select_size and #select_style, they could look like this:</p>
-<pre>
-...continued from above
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f92672">.</span><span style="color: #f8f8f2">.</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">continued</span> <span style="color: #f8f8f2">from</span> <span style="color: #f8f8f2">above</span>
 
-def select_size
-    puts "Please select a size: 12 inch, 14 inch or 16 inch?"
-    @size = gets.chomp
-end 
+<span style="color: #66d9ef">def</span> <span style="color: #a6e22e">select_size</span>
+    <span style="color: #f8f8f2">puts</span> <span style="color: #e6db74">&quot;Please select a size: 12 inch, 14 inch or 16 inch?&quot;</span>
+    <span style="color: #f8f8f2">@size</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">gets</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">chomp</span>
+<span style="color: #66d9ef">end</span> 
 
-def select_style
-    puts "Please select a style: New York or Sicilian?"
-    @style = gets.chomp
-    puts "One #{@size} sized #{@style} style pizza coming up!"
-end
-</pre>
+<span style="color: #66d9ef">def</span> <span style="color: #a6e22e">select_style</span>
+    <span style="color: #f8f8f2">puts</span> <span style="color: #e6db74">&quot;Please select a style: New York or Sicilian?&quot;</span>
+    <span style="color: #f8f8f2">@style</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">gets</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">chomp</span>
+    <span style="color: #f8f8f2">puts</span> <span style="color: #e6db74">&quot;One #{</span><span style="color: #f8f8f2">@size</span><span style="color: #e6db74">} sized #{</span><span style="color: #f8f8f2">@style</span><span style="color: #e6db74">} style pizza coming up!&quot;</span>
+<span style="color: #66d9ef">end</span>
+</pre></div>
+
 <p>Now we start to see how cool instance variables are. Notice how I assigned @size in the method Pizza#select_size, but then used it again in Pizza@select_style? This is because instance variables can be used in any method you create within the class if they are initialized at the beginning. If we had used a regular variable in select_size, we could not use it again in a new method and its scope would be limited to where it was first defined.</p>
 
 <p>Now let's add the toppings! This is just one way I found to do it, and I'm sure there are many different options. I also considered running the toppings in as arguments, but I wanted it to be more user-interactive so I used gets.chomp method to assign the toppings variable to what ever the user wanted.</p>
 
-<pre>
-def add_toppings
-      puts "What would you like on the pizza?"
-      toppings = gets.chomp
-      @toppings = toppings.split(" ")
-      if @toppings.count == 2
-          @toppings = @toppings[0].to_s + " and " + @toppings[1].to_s
-      elsif
-      @toppings.count > 2
-        @toppings =  @toppings.insert(@toppings.size - 1, "and").join(" ")
-      else
-          @toppings = @toppings.join("")
-      end #End if statement
-      puts "You ordered a #{@size} inch #{@style} style pizza with #{@toppings}."
-  end 
-  </pre>
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #66d9ef">def</span> <span style="color: #a6e22e">add_toppings</span>
+      <span style="color: #f8f8f2">puts</span> <span style="color: #e6db74">&quot;What would you like on the pizza?&quot;</span>
+      <span style="color: #f8f8f2">toppings</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">gets</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">chomp</span>
+      <span style="color: #f8f8f2">@toppings</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">toppings</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">split(</span><span style="color: #e6db74">&quot; &quot;</span><span style="color: #f8f8f2">)</span>
+      <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">@toppings</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">count</span> <span style="color: #f92672">==</span> <span style="color: #ae81ff">2</span>
+          <span style="color: #f8f8f2">@toppings</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">@toppings</span><span style="color: #f92672">[</span><span style="color: #ae81ff">0</span><span style="color: #f92672">].</span><span style="color: #f8f8f2">to_s</span> <span style="color: #f92672">+</span> <span style="color: #e6db74">&quot; and &quot;</span> <span style="color: #f92672">+</span> <span style="color: #f8f8f2">@toppings</span><span style="color: #f92672">[</span><span style="color: #ae81ff">1</span><span style="color: #f92672">].</span><span style="color: #f8f8f2">to_s</span>
+      <span style="color: #66d9ef">elsif</span>
+      <span style="color: #f8f8f2">@toppings</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">count</span> <span style="color: #f92672">&gt;</span> <span style="color: #ae81ff">2</span>
+        <span style="color: #f8f8f2">@toppings</span> <span style="color: #f92672">=</span>  <span style="color: #f8f8f2">@toppings</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">insert(@toppings</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">size</span> <span style="color: #f92672">-</span> <span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;and&quot;</span><span style="color: #f8f8f2">)</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">join(</span><span style="color: #e6db74">&quot; &quot;</span><span style="color: #f8f8f2">)</span>
+      <span style="color: #66d9ef">else</span>
+          <span style="color: #f8f8f2">@toppings</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">@toppings</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">join(</span><span style="color: #e6db74">&quot;&quot;</span><span style="color: #f8f8f2">)</span>
+      <span style="color: #66d9ef">end</span> <span style="color: #75715e">#End if statement</span>
+      <span style="color: #f8f8f2">puts</span> <span style="color: #e6db74">&quot;You ordered a #{</span><span style="color: #f8f8f2">@size</span><span style="color: #e6db74">} inch #{</span><span style="color: #f8f8f2">@style</span><span style="color: #e6db74">} style pizza with #{</span><span style="color: #f8f8f2">@toppings</span><span style="color: #e6db74">}.&quot;</span>
+  <span style="color: #66d9ef">end</span> 
+</pre></div>
+
 
   <p>There's a lot going on in this one! Basically, I tried to make it so the user's response would be assigned to the local variable toppings so that it could be split into an array and assigned to the instance variable @toppings. Then I check to see if the @toppings array has exactly two items, if it does, I assign the @toppings variable to the joined string of those two items, joined by the word "and". If it's greater than two, then I create a new string that inserts "and" before the second to last item. It's a little messy because I don't have commas in the right place with greater than 2 items, but for now it is my "Minimum Viable Product". Some time when I'm more proficient with Ruby, I'll revisit and see how to clean this method up so my imaginary pizza customers see a grammatically pretty output. </p>
   <p>Here's the output from running these lines:</p>
-  <pre>
-  my_pizza = Pizza.new
-  my_pizza.select_size
-  my_pizza.select_style
-  my_pizza.add_toppings
-  </pre>
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">  <span style="color: #f8f8f2">my_pizza</span> <span style="color: #f92672">=</span> <span style="color: #66d9ef">Pizza</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">new</span>
+  <span style="color: #f8f8f2">my_pizza</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">select_size</span>
+  <span style="color: #f8f8f2">my_pizza</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">select_style</span>
+  <span style="color: #f8f8f2">my_pizza</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">add_toppings</span>
+</pre></div>
+<br>
   <img src="../imgs/pizza-output.png" alt="pizza-output" class="blog-image-3"/>
   <p>Thanks for reading!</p>
 
