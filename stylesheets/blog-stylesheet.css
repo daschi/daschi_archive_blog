@@ -35,7 +35,7 @@ html, body {
   text-align:center;
 }
 
-table {
+#index-table {
   max-width: 100%;
   text-align: left;
   border-spacing: 20px;
@@ -45,6 +45,17 @@ table {
   margin-right: 10%;
 }
 
+#blog-table {
+  position: relative;
+}
+
+#blog-table, td {
+  padding: 0px 10px 0px 10px;
+}
+
+#blog-table th {
+  border-bottom: 2px solid black;
+}
 /*----------------- Blog Post ------------*/
 
 #blog-body {

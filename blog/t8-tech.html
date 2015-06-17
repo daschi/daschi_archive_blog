@@ -36,23 +36,63 @@
 <div id="blog-body">
   <article class="blog-post">
     <div class="blog-heading">
-      <h1>TITLE HERE</h1>
-      <h3>SUBTITLE</h3>
-      <h4>DATE</h4>
+      <h1>RegEx</h1>
+      <h3>Intro to Regular Expressions</h3>
+      <h4>2015-06-16</h4>
     </div>
-     <h2>BLOG POST HEADING</h2>
-      <p>BLOG CONTENT PARAGRAPH 1</p>
-        <ul class="list">
-          <li>LIST ITEMS</li></ul>
-       
-        <ol>
-          <li>LIST ITEMS</li></ol>
+
+     <h2>What are Regular Expressions?</h2>
+      
+      <p>A regular expressions is a pattern that you can use to search for and match a very specific string of text. A regular expression can search for any type of character, which could include any letter, number, symbol, and unicode letters for foreign languages. It also can pattern match whitespace and escaped or hidden characters like a new line or a tab. Here's a look at using regex to search for a name:</p>
+      
+      <note>The following example is from <a href="http://regex.learncodethehardway.org/book/introduction.html">Learn Regex the Hard Way.</a></note><br><br>
+      <pre>name.match(/^[\da-z]+\d$/)</pre>
+      <br>
+      <p>If you've never seen regex, this probably looks like gibberish. Let's take a closer look and break it down:</p>
+      
+          <p>^  Match the beginnig of the string or line</p>
+          <p>[ ]  The square brackets match a set of characters.</p>
+          <p>[\da-z]  \d matches any digit from 0-9 and then a-z is matched</p>
+          <p>+  Match the preceding character set one or more times</p>
+          <p>\  Match any digits from 0-9</p>
+          <p>$  Match the end of the line (opposite of the ^ symbol)</p> 
+
+       <p>So basically, this is searching for any string with any digit from 0-9 and any letter from a-z until the end of the line.</p>
+       <p>You can see that regex is a very powerful tool. You could use it to search for any kind of character pattern, identify it and manipulate it. This can be used to validate user input for e-mail addresses, phone numbers, usernames. It can also be used to rename hundreds of file names at once, advanced search and replace and editing file names. Regex is often used by localization engineers and there are hundres of reasons a a localization engineer may need to search and protect strings in a file from being translated.</p>
+
+    <h2>Intro Reference to Character Matching</h2>
+      <table id="blog-table">
+      <th>Characters</th>
+        <tr>
+        <td style="font-size: 1.5em; text-align: center;">.</td>
+        <td>dot: Match any character except line breaks</td>
+        <td>Example: <span style="background-color:blue; color:white;">everything is matched</span></td>
+        </tr>
+        <tr>
+        <td style="font-size: 1.5em; text-align: center;">\w</td>
+        <td>Word - Match any word character, same as [A-Za-z0-9]. Opposite is \W which matches anything that is not a word.</td>
+        <td>Example: <span style="background-color:blue; color:white;">each</span> <span style="background-color:blue; color:white;"> word</span> <span style="background-color:blue; color:white;">matched</span></td>
+        </tr>
+        <tr>
+        <td style="font-size: 1.5em; text-align: center;">\d \D</td>
+        <td>Digit/Not a Digit - Lowercase d matches any digit 0-9 and uppercase matches any character not a digit.</td>
+        <td>Example: +1-(444) 555-9302</td>
+        </tr>
+        <tr>
+        <td style="font-size: 1.5em; text-align: center;">\s \S</td>
+        <td>Whitespace/Not whitespace - Not white space (\S) matches anything that is not a whitespace, including spaces, tabs and lines breaks.</td>
+        <td>Example: +1-(444)<span style="background-color:blue; color:white;"> </span>555-9302</td>
+        </tr>
+      </table><br>
+
+    <p>There are some really great resources for learning how to navigate and write Regex. Check them out!</p>
 
 <div class="resources">
       <h2>Additional Resources & References</h2>
-      <a href="http://www.globalnerdy.com/2008/08/31/enumerating-enumerable-enumerablegroup_by/" target="_blank">Enumerating Enumerables: Group By</a><br>
+      <a href="http://regex.learncodethehardway.org" target="_blank">Learn Regex the Hard Way</a><br>
+      <a href="http://regexr.com/" target="_blank">Regexr (learn by doing!)</a><br>
+      <a href="http://regexone.com/" target="_blank">RegexOne (lessons)</a><br>
 </div>
-
 </article>
 </div>
 
