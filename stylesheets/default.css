@@ -11,13 +11,8 @@ html, body {
   background-repeat: repeat;
   font-family: 'Mako', sans-serif;
   height: 100%;
-  width: 100%;
 }
 
-#container {
-  min-height: 100%;
-  position: relative;
-}
 
 /* ------------------ Homepage Header ------------*/
 header {
@@ -44,7 +39,7 @@ header {
 }
 
 #subtitle {
-  font-size: 15px;
+  font-size: 20px;
   margin: 5px;
 }
 
@@ -71,30 +66,49 @@ a:visited {
 
 /*----------------- Body ---------------*/
 .body {
-  display: inline-block;
-  padding: 40px;
-  margin: 0 auto;
-  max-width: 100%;
+  min-height: 100%;
+  padding-top: 30px;
 }
 
-.intro {
-  display: inline-block;
+.intro-body {
+  margin-left: 20%;
+  margin-right: 20%;
+  padding-bottom: 100px;
+}
+
+.intro-text{
+  text-align: center;
+  font-size: 130%;
+  margin-top: 10px;
+
+}
+
+.intro-heading{
+  text-align: center;
+  border-bottom: 1px solid gray;
+  font-size: 200%;
   width: 100%;
 }
 
-.aboutMe{
-  margin-right: 10%;
-  width: 80%;
+.img {
+  margin: 0 auto;
+  max-width: 10%;
 }
 
 #myPic {
-  float: left;
-  max-width: 15%;
-  margin: 5px 15px 5px 0px;
+  width: 150px;
+  height: 150px;
+  -webkit-border-radius: 150px;
+  -moz-border-radius: 150px;
+  background: url("../imgs/daniela.jpg") no-repeat;
+  box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+  -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
 }
 
+
 /*------------Email Form----------------------*/
-fieldset {
+/*fieldset {
   border: 2px solid gray;
   border-radius: 10px;
   width: 300px;
@@ -118,11 +132,11 @@ input, textarea {
   margin: 5%;
   display: block;
 }
-
+*/
 /*---------------- Events ----------------*/
 
 /*----------------- Footer ---------------*/
-#footer{
+/*#footer{
   background-image: url("../imgs/lodyas.png");
   position: relative;
   bottom: 0;
@@ -138,19 +152,27 @@ input, textarea {
   left: 0;
   height: 100px;
   width:100%;
-}
+  margin-top: -100px;
+
+}*/
 
 footer {
-  margin: 10px 20px 0px 0px;
-  float: right;
+  background-image: url("../imgs/lodyas.png");
+  bottom: 0;
+  left: 0;
+  height: 100px;
+  width:100%;
+  clear: both;
+  margin-bottom: 0;
 }
 
-#dbc{
+footer #dbc {
   margin: 10px 20px 0px 0px;
+  float: right;
   clear: right;
 }
 
 .social-media {
   float: right;
-  margin: 20px 20px 10px 0px;
+  margin: 10px 20px 0px 0px;
 }
