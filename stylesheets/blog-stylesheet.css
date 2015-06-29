@@ -1,64 +1,26 @@
 @charset "UTF-8";
-/*-------------- Page Structure ------------*/
-html, body {
-  font-family: 'Mako', sans-serif;
-  margin: 0px;
-  padding: 0px;
-  height: 100%;
-  width: 100%;
-}
 
-#container {
-  min-height: 100%;
-  position: relative;
-}
-
-#header {
-  padding: 0px;
-}
 /*----------------- Blog Index ---------------*/
-
-#body {
+.body {
+  height: 100%;
   padding: 30px 10px 10px 10px;
   margin: 0 auto;
-  max-width: 1000px;
-  display: block;
-}
-
-#blog-index
-{
-  font-family: 'Mako', sans-serif;
   max-width: 900px;
-  margin: 0 auto;
-}
-.readBlog {
-  text-align:center;
 }
 
 #index-table {
   max-width: 100%;
   text-align: left;
   border-spacing: 20px;
-  position: relative;
-  margin: 0 auto;
-  margin-left: 10%;
-  margin-right: 10%;
+  margin: 0 10% 0 10%;
 }
 
-#blog-table {
-  position: relative;
+th {
+  font-size: 120%;
 }
 
-#blog-table, td {
-  padding: 0px 10px 0px 10px;
-}
-
-#blog-table th {
-  border-bottom: 2px solid black;
-}
 /*----------------- Blog Post ------------*/
-
-#blog-body {
+.blog-body {
   padding: 10px;
   padding-bottom: 20px;
   position: relative;
@@ -152,20 +114,6 @@ border: 3px solid black;
 .resources {
   padding-top: 5%;
 }
-/*------- Code Blocks --------*/
-
-/*pre{
-  background: black;
-  border: 2px solid gray;
-  padding: 5px;
-  color: #58D9EF;
-  max-width: auto;
-  word-wrap: break-word;
-}
-
-pre .note {
-  color: #ffffff;
-}*/
 
 /*---------------- Blog Nav ---------------*/
 .navbar-default{
