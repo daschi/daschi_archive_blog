@@ -106,35 +106,6 @@ a:visited {
   -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
 }
 
-
-/*------------Email Form----------------------*/
-/*fieldset {
-  border: 2px solid gray;
-  border-radius: 10px;
-  width: 300px;
-  padding: 15px;
-  background-color: #eee;
-}
-
-input, textarea {
-  float: right;
-  border: none;
-}
-
-.form-label {
-  padding-bottom: 10px;
-  height: 100%;
-  display: inline-block;
-  width: 100%;
-}
-
-.form {
-  margin: 5%;
-  display: block;
-}
-*/
-/*---------------- Events ----------------*/
-
 /*----------------- Footer ---------------*/
 
 footer {

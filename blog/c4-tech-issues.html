@@ -6,20 +6,14 @@
   <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
   <link href='https://fonts.googleapis.com/css?family=Mako|Expletus+Sans' rel='stylesheet' type='text/css'>
 </head>
-
 <body>
-
-<!-- The container helps to position everything on the page -->
-
-<div id="container">
-
 <!-- ***** Header ***** -->
 <header>
 <div id="header-container">
   <div class="inner-header">
     <div class="title">
     <h1 id="name"><a href="https://daschi.github.io/">Daniela Schiano di Cola</a></h1>
-    <h3 id="subtitle">build and learn<br>a bootcamp story</h3>
+    <h3 id="subtitle">build and learn: a bootcamp story</h3>
     </div>
 
 <!-- ********** Web site nav ************ -->
@@ -32,19 +26,19 @@
   </div>
  </header>
 <!-- ********** Blog Body ************ -->
-<div id="blog-body">
+<div class="blog-body">
   <article class="blog-post">
-    <div class="blog-heading">
-      <h1>Issues in Tech: Localization</h1>
-      <h3>Localizing software for language and culture</h3>
+    <div class="blog-title">
+      <h1>Issues in Tech: Localizing software for language and culture</h1>
       <h4>2015-05-24</h4>
     </div>
+    <div class="post">
     <img src="../imgs/localize.png" alt="localize" class="blog-image"/>
-    <h2>Localization and Internationalization</h2>
+    <h3>Localization and Internationalization</h3>
     <p>This week in DevBootcamp, we are asked to select an issue in the tech industry to write about. Instinctually my mind wandered to issues like women in tech, diversity in tech, educational opportunities for the low-income students to be exposed to tech, etc. Don't get me wrong, I could go on and on for hours on those topics, which is why I've decided to talk about something I've been marginally involved with in the past year, but don't particularly know too many details about.</p> 
     <p>That's why I'll try to focus this post on localization and internationalization of software and applications. I know a bit because I've been a localization project manager for the past year, which means I worked with various (tech company) clients to localize and internationalize their software, web/mobile apps, and sites into whichever languages are needed for their market. I've heard many times from engineers in the field that it's particularly difficult to write a program that will later be internationalized. My quest for today is to find out some reasons why it is difficult to internationalize code.</p>
 
-    <h2>What are Localization and Internationalization?</h2>
+    <h3>What are Localization and Internationalization?</h3>
     <h3>Localization: L10n</h3>
     <p>Simply, localization adapts a product, application or content to match the linguistic and cultural needs of a specific audience. This is done by translators, usually with a CAT (Computer-Assisted Translation) Tool. CAT tools work by segmenting sentences into either whole sentences or phrases where it seems semantically logical to segment. This helps the translator break up the meaning of a sentence and restructure it as they need to for their language, and also saves the segments in a database called a Translation Memory (TM). The TM stores all the previously translated segments so that files that are updated later down the road can be analyzed and leveraged using previous translations. This helps translators to recycle and reuse past translations, and it also saves time and money. Localizing a product also means testing, which is a crucial step to ensure that everything in the UI and content makes sense in context.</p>
     <p>One more quick note on the difference between "localization" and "translation". Localizing creates a new product that is culturally and linguistically appropriate for the country and audience. For example, a file may be translated into Spanish--but which Spanish? It will need to be localized for either Spanish for Spain, for Mexico, Argentina, Guatemala, Ecuador...I think you are seeing the point now...</p>
@@ -72,18 +66,18 @@
     <p>Think about sorting A-Z, with all the letters in the Turkish alphabet. What about with Chinese characters?</p>
     </ul>
     <p>I'm still learning, so although many of my "issues" sound very authoritative, think of them more as questions to open the dialogue of what we need to do to localize software.</p>
-    <div class="resources">
-      <h2>Additional Resources & References</h2>
-      <a href="http://www.w3.org/International/questions/qa-i18n" target="_blank">W3C: Localization vs. Internationalization</a>
-      <br>
-      <a href="http://www.gala-global.org/" target="_blank">GALA: Globalization and Localization Association</a>
-      <br>
-      <a href="http://edutechwiki.unige.ch/en/Software_localization" target="_blank">EduTech Wiki: Software Localization</a>
-      <br>
-      <a href="http://www.smashingmagazine.com/2012/07/18/12-commandments-software-localization/" target="_blank">Smashing Magazine: Twelve Commandments of Software Localization</a>
-      <br>
+      <div class="resources">
+        <h2>Additional Resources & References</h2>
+        <a href="http://www.w3.org/International/questions/qa-i18n" target="_blank">W3C: Localization vs. Internationalization</a>
+        <br>
+        <a href="http://www.gala-global.org/" target="_blank">GALA: Globalization and Localization Association</a>
+        <br>
+        <a href="http://edutechwiki.unige.ch/en/Software_localization" target="_blank">EduTech Wiki: Software Localization</a>
+        <br>
+        <a href="http://www.smashingmagazine.com/2012/07/18/12-commandments-software-localization/" target="_blank">Smashing Magazine: Twelve Commandments of Software Localization</a>
+      </div>
     </div>
-    </article>
+  </article>
  </div>
 
  <!-- ***Blog nav*** -->
@@ -116,10 +110,13 @@
 <a href="https://daschi.github.io/blog/t7-JavaScript.html" class="blog-nav">Ruby Class vs. JavaScript Constructor</a>
 <br>
 <a href="https://daschi.github.io/blog/t8-tech.html" class="blog-nav">Intro to Regular Expressions</a>
+<br>
+<a href="https://daschi.github.io/blog/c8-conflict.html" class="blog-nav">Conflict Resolution</a>
+<br>
+<a href="https://daschi.github.io/blog/c9-questions.html" class="blog-nav">How to Ask Questions</a>
 </nav>
 
 <!-- ***** Footer ***** -->
-<div id="footer">
 <footer>
     <div class="social-media">
       <a href="https://github.com/daschi" target="_blank"><img title="GitHub" alt="GitHub" src="../imgs/GitHub.png" width="35" height="35"/></a>
@@ -133,8 +130,6 @@
     </div>
 
 </footer>
-</div> <!--***** Close footer container div *****-->
-</div> <!--***** Close container div *****-->
 </body>
 </html>
 

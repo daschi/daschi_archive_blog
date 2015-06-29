@@ -23,90 +23,51 @@ th {
 .blog-body {
   padding: 10px;
   padding-bottom: 20px;
-  position: relative;
   margin: 0 100px 50px 100px;
 }
 
-#blog-body p {
-  padding-bottom: 10px;
-}
-
 .blog-post {
-  position: relative;
   margin: 5% 20% 10% 0%;
-  background-color: transparent;
 }
 
 .blog-title {
   font-size: 20px;
+  border-bottom: 2px solid gray;
+  text-align: center; 
+  padding-bottom: 10px;
 }
 
-h2 {
-  padding: 10px 0px 10px 0px;
-  color: #E80C0C;
+.post {
+  padding-top: 30px;
+}
+
+h3 {
+  padding: 10px 0 10px 0;
 }
 
 /*------ Images -------- */
 .blog-image{
-  width: 20%;
   float: left;
-  border: 2px solid;
-  padding: 5px;
-  margin: 10px 25px 10px 10px;
-}
-
-.blog-image-wrapper{
-  width: 100%;
-  display: inline-block;
-  padding: 5px;
-  margin: 25px 25px 10px 0px;
-}
-
-
-#blog-image-1{
   width: 20%;
-  display: inline-block;
-  border: 2px solid;
-  padding: 5px;
-  margin: 0px 10px 10px 30px;
-}
-
-#blog-image-2{
-  display: inline-block;
-  width: 20%;
-  border: 2px solid;
-  padding: 5px;
-  margin: 10px 10px 10px 20px;
-}
-
-.blog-image-3{
-  display: inline-block;
-  width: 100%;
-
+  border: 1px solid gray;
+  margin: 10px;
 }
 
 figcaption{
   font-size: 15px;
-  position: relative;
   font-style: italic;
-  margin-left: 20px;
+  padding: 10px 0 10px 10px;
 }
 
-li {
+ul {
 	list-style-type: square;	
   list-style-position: inside;
+  padding-left: 30px;
 }
 
-.body-image{
-position: static;
-width: 400px;
-height: 400px;
-border: 3px solid black;
-}
-
-.break-line{
-  padding-bottom: 10px;
-  border-bottom: 2px solid #eee;
+ol {
+  list-style-position: inside;
+  padding-left: 30px;
 }
 
 /*-------- Resources -----------*/

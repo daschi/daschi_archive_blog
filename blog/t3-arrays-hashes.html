@@ -6,20 +6,15 @@
   <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
   <link href='https://fonts.googleapis.com/css?family=Mako|Expletus+Sans' rel='stylesheet' type='text/css'>
 </head>
-
 <body>
 
-<!-- The container helps to position everything on the page -->
-
-<div id="container">
-
-<!-- ***** Header ***** -->
+<!-- *** Header *** -->
 <header>
 <div id="header-container">
   <div class="inner-header">
     <div class="title">
     <h1 id="name"><a href="https://daschi.github.io/">Daniela Schiano di Cola</a></h1>
-    <h3 id="subtitle">build and learn<br>a bootcamp story</h3>
+    <h3 id="subtitle">build and learn: a bootcamp story</h3>
     </div>
 
 <!-- ********** Web site nav ************ -->
@@ -33,41 +28,41 @@
  </header>
 
 <!-- ***** Blog Starts ***** -->
-<div id="blog-body">
+<div class="blog-body">
   <article class="blog-post">
-  <div class="blog-heading">
-    <h1>[Arrays] and {Hashes}</h1>
-    <h3>An introduction for you and me</h3>
-    <h4>2015-05-16</h4>
-  </div>
-  <div class="blog-image-wrapper">
-    <img src="../imgs/hash_hash.png" alt="hash-image" id="blog-image-2"/>
-    <img src="../imgs/array_hash.png" alt="array-image" id="blog-image-1"/>
-        <figcaption>hash and array images, taken from <a href="http://www.kirupa.com/html5/hashtables_vs_arrays.htm">here</a></figcaption>
-</div>
-  <h2>Ruby Arrays & Hashes</h2>
+    <div class="blog-title">
+      <h1>[Arrays] and {Hashes}</h1>
+      <h4>2015-05-16</h4>
+    </div>
+    <div class="post">
+    <div style="padding-top: 10px;">
+    <img src="../imgs/hash_hash.png" alt="hash-image"/>
+    <img src="../imgs/array_hash.png" alt="array-image"/>
+    <figcaption>hash and array images, taken from <a href="http://www.kirupa.com/html5/hashtables_vs_arrays.htm">here</a></figcaption>
+    </div>
+    <h3>Ruby Arrays & Hashes</h3>
     <p>This past week I've delved into learning about Arrays and Hashes in Ruby, and learned that there's a lot of opinions about using one or the other, or both. I'll present here what I've learned so far, but I know I'll need to revisit this blog when I see both their uses on regular basis. <br>As a quick intro, Arrays and Hashes are two types of data structures that allow you to sort and search through a list of elements (ANY list, a list of words, numbers, mix of the two, or even a list of a list of a list).</p>
-  <h2>Arrays</h2>
+    <h3>Arrays</h3>
     <p>There are several ways to create an array in Ruby, and it's good to note that each element in an array can be a different data type:</p>
-    
-    <ol class="list">
-        <li><code>array_name = Array.new</code></li>
-        <p>Using the array new method</p>
-        <li><code>array_name = ["item 1", 24, true]</code></li>
-        <p>Using the array literal notation with square brackets</p>
-        <li><code>%w{This is an array}</code></li>
-        <p>Using the %w operator, the above will create the array ["This", "is", "an", "Array"]</p></ol>
+      <ol>
+          <li><code>array_name = Array.new</code></li>
+          <p>Using the array new method</p>
+          <li><code>array_name = ["item 1", 24, true]</code></li>
+          <p>Using the array literal notation with square brackets</p>
+          <li><code>%w{This is an array}</code></li>
+          <p>Using the %w operator, the above will create the array ["This", "is", "an", "Array"]</p>
+      </ol>
     <p>A simple array looks like this:</p>
-    <p><code>ice_cream = ["chocolate", "vanilla", "strawberry", "cookies & cream"]</code>
+    <p><code>ice_cream = ["chocolate", "vanilla", "strawberry", "cookies & cream"]</code></p>
     <p>This array has 4 elements, if we wanted to know which ice cream was third in the list, we could check at the index 2. Arrays in Ruby start counting elements from 0.</p>
     <p><code>ice_cream[2]</code><br>
     <code>=>"strawberry"</code></p>
     <p>There's a ton of different methods you can use to manipulate and iterate over an array! You can insert (<code>.push</code>), retrieve (<code>array[0]</code>) or remove (<code>.delete_at()</code> any element in an array. You can also retrieve 1 or more array elements at a time. You can also combine two or more different arrays into one, which can give you an array within an array, or a "flattened" array, where all elements are taken our of each of their own individual arrays and added together to make one array. The element .join will string together string elements, and alternatively, the .split method will take a string and split it into an array based on a specified character divider. Iterating over an array means you can define a method to look at each element and do something with it.</p>
 
-    <h2>Hashes</h2>
+    <h3>Hashes</h3>
     <p>Just like the Array, the hash is what's considered a "collection" in Ruby, meaning that it's a collection of elements that can be accessed and manipulated in different ways. A hash is set up a bit differently than an array, instead of a list of elements, it's a list of key/value pairs. The key/value pair's key is used to quickly identify access the value needed. Check out <a href="http://www.kirupa.com/html5/hashtables_vs_arrays.htm">this great explanation</a> of the difference between accessing a value in an Array vs. a hash!</p>
     <p>To create a new hash, you can use similar methods to creating an array:</p>
-      <ol class="list">
+      <ol>
         <li><code>hash_name = Hash.new(default value)</code></li>
         <p>Using the hash new method with a default value specified in the argument will give any key that is not paired with a value the default value.</p>
         <li><code>Hash[[key,value], [key2,value2]]</code></li>
@@ -76,12 +71,12 @@
         <p>This creates an empty hash that you can then push the key/value pairs into. To push the pairs, you would use the following syntax: hash["key"] = "value"</p>
       </ol>
     <p>A simple hash:</p>
-    <p><code>food_stuffs = ["ice cream" => "chocolate", "sandwich" => "BLTA", "soup" => "potato leek"]</code>
+    <p><code>food_stuffs = ["ice cream" => "chocolate", "sandwich" => "BLTA", "soup" => "potato leek"]</code></p>
     <p>This hash has 3 key/value pairs, if we wanted to know which value corresponds with which key, would could check by calling that key. Unlike an Array, a Hash doesn't necessarily sort the key/value pairs in any order because they can be accessed by the key instead of the index position</p>
     <p><code>food_stuffs["ice cream"]</code><br>
     <code>=>"chocolate"</code></p>
-      <p>Just like arrays, you can retrieve information from a hash, select key/value pairs within a hash, and transform a hash by inverting it, clearing it, rejecting elements, or replacing the contents of the key/value pairs. You can also combine hashes.</p>
-      <p>One thing that is clearly different between an array and a hash is the reason you would iterate over it. For an array, you are iterating over each element to find the value you need. In a hash, the key tells you the value almost instantly, so you don't necessarily  need to iterate over a hash to find a value. Iterating over a hash will give you the key/value pairs.</p>
+    <p>Just like arrays, you can retrieve information from a hash, select key/value pairs within a hash, and transform a hash by inverting it, clearing it, rejecting elements, or replacing the contents of the key/value pairs. You can also combine hashes.</p>
+    <p>One thing that is clearly different between an array and a hash is the reason you would iterate over it. For an array, you are iterating over each element to find the value you need. In a hash, the key tells you the value almost instantly, so you don't necessarily  need to iterate over a hash to find a value. Iterating over a hash will give you the key/value pairs.</p>
 
       <div class="resources">
       <h2>Additional Resources & References</h2>
@@ -90,6 +85,7 @@
       <a href="http://learnrubythehardway.org/book/ex39.html" target="_blank">Learn Ruby the Hard Way: Hashes, Oh Lovely Hashes</a><br>
       <a href="http://andywenk.github.io/programming/2014/06/27/ruby-create-a-hash-from-arrays/" target="_blank">Ruby Create a Hash from Arrays</a><br>
       <a href="http://rubymonk.com/learning/books/1-ruby-primer/chapters/10-hashes-in-ruby/lessons/47-hashes-in-and-out" target="_blank">Ruby Monk: Hashes, in and out.</a>
+      </div>
       </div>
     </article>
  </div>
@@ -123,9 +119,12 @@
 <a href="https://daschi.github.io/blog/t7-JavaScript.html" class="blog-nav">Ruby Class vs. JavaScript Constructor</a>
 <br>
 <a href="https://daschi.github.io/blog/t8-tech.html" class="blog-nav">Intro to Regular Expressions</a>
+<br>
+<a href="https://daschi.github.io/blog/c8-conflict.html" class="blog-nav">Conflict Resolution</a>
+<br>
+<a href="https://daschi.github.io/blog/c9-questions.html" class="blog-nav">How to Ask Questions</a>
 </nav>
 <!-- ***** Footer ***** -->
-<div id="footer">
 <footer>
     <div class="social-media">
       <a href="https://github.com/daschi" target="_blank"><img title="GitHub" alt="GitHub" src="../imgs/GitHub.png" width="35" height="35"/></a>
@@ -137,10 +136,7 @@
     <div id="dbc">
       <p>I designed this site during <a href="http://devbootcamp.com/">Dev Bootcamp!</a></p>
     </div>
-
 </footer>
-</div> <!--***** Close footer container div *****-->
-</div> <!--***** Close container div *****-->
 </body>
 </html>
 
